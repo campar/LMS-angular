@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body{
+width: 100%;
+height: 100%;
+margin: 0;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}
+// html {
+//   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+//   @include respond(phone) { // width < 600
+//     font-size: 50.25%; //1 rem = 9px, 9/16 = 50%
+//   }
+
+//   @include respond(tab-land) { // width < 1200?
+//       font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+//   }
+
+//   @include respond(tab-port) { // width < 900?
+//       font-size: 50%; //1 rem = 8px, 8/16 = 50%
+//   }
+
+//   @include respond(big-desktop) {
+//       font-size: 75%; //1rem = 12, 12/16
+//   }
+// }
+
+
+ul,
+ol{
+  list-style: none;
+}
+
+// a{
+//   text-decoration: none;
+//   &:hover{
+//     text-decoration: none;
+//   }
+// }
+
+// textarea {
+//   resize: none;
+// }
+
+button{
+// outline: none;
+cursor: pointer;
+border: 0;
+// height: 100%;
+font-size: 100%;
+font-family: inherit;
+// padding: 0 !important;
+// margin: 0  !important;
+&:focus{
+  outline: none;
+  border: 0;
+}
+}
+
+// input{
+//   outline: none;
+//   border:none;
+// }
+
+//input type="number" HIDE ARROWS
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;}
+
+
+  .wrapper {
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+
+    width: 960px; /* 2 */
+  }

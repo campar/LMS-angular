@@ -1,0 +1,9 @@
+.chat-side-bar{
+  background:red;
+  position: fixed;
+  right:0;
+  top:0;
+  bottom:0;
+  width:300px;
+  transition: width .35s ease-in-out;
+}

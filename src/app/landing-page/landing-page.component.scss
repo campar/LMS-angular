@@ -1,0 +1,54 @@
+.student-number-info{
+  background:#fefffe;
+  // display:flex;
+  height:35px;
+  text-align: center;
+  span{
+   font-weight: 700;
+  }
+  i{
+
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+  }
+}
+
+.landing-page{
+  &__info{
+    background:#34b0e6;
+    padding:50px 0;
+    color:#fff;
+    // position: relative;
+    text-align: center;
+    p{
+      margin:0 auto;
+      width:70%;
+      margin-top:20px;
+    }
+    button{
+      margin-top:40px;
+      cursor: pointer;
+      background:#37494d;
+      padding:10px;
+      color:#fff;
+      border-radius:5px;
+      border:1px solid #ccc;
+    }
+  }
+}
+
+
+.university-container{
+  padding-top:40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom:30px;
+}
+
+.university__header{
+  padding-top:40px;
+  text-align:center;
+  font-size:40px;
+}

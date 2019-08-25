@@ -1,0 +1,20 @@
+.nav-header__wrapper{
+  position: relative;
+  height:60px;
+  width:100%;
+}
+
+
+ul{
+  display:flex;
+  z-index: 1000;
+  // height:60px;
+  color:#fff;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 30px;
+  position: fixed;
+  width:100%;
+  background:#35474f;
+  height:60px;
+}

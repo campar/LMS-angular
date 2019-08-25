@@ -1,0 +1,75 @@
+.university-rector{
+  margin-top:20px;
+  padding:10px;
+  padding-top:3px;
+  border-radius:10px;
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.45);
+  &__flex{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    // padding-left:100px;
+    // padding-right:100px;
+  }
+  &__name{
+    color:#209ee4;
+    &:hover{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  &__phone{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &:hover{
+      & > p{
+       text-decoration: underline;
+      }
+    }
+    i{
+      color:#333333;
+      margin-right:5px;
+    }
+  }
+  &__email{
+    display: flex;
+    align-items: center;
+    margin-top:10px;
+    cursor: pointer;
+    &:hover{
+      & > p{
+       text-decoration: underline;
+      }
+    }
+    i{
+      margin-right:5px;
+      color:#333333;
+    }
+  }
+  hr{
+    margin-top:10px;
+    margin-bottom: 10px;
+    width:85%;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  h3{
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+
+
+
+  &__profile-image{
+    display: inline-flex;
+    align-items: center;
+    img{
+      margin-right:5px;
+      border-radius:50%;
+    }
+  }
+}

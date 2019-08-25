@@ -1,0 +1,52 @@
+:host{
+  flex: 0 0 calc(33.333333% - 5px);
+
+}
+
+.university-card{
+
+  background:#fff;
+  padding:10px;
+  margin-bottom:10px;
+  &__content{
+    text-align: center;
+  }
+  &__header{
+    margin-top:20px;
+    font-weight: 700;
+  }
+  &__description{
+    margin-top:10px;
+    padding:0 10px;
+  }
+  &__button{
+    margin-top:20px;
+    width:100%;
+    padding:0 10px;
+    button{
+      color:#fff;
+      padding: 10px 0;
+      width:100%;
+      background:#ff5100;
+      border-radius:15px;
+      &:hover{
+        background:#ee4d02;
+      }
+    }
+
+  }
+  &__background{
+    background:#88c8e4;
+    height:200px;
+    position: relative;
+
+  }
+  &__image{
+    text-align: center;
+    position: relative;
+    left:50%;
+    top:50%;
+    // background: red;
+    transform:translate(-50%, -50%);
+  }
+}
