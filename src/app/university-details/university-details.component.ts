@@ -24,7 +24,8 @@ export class UniversityDetailsComponent implements OnInit {
       this.chatSideBar.nativeElement.style.width = '0';
 
     }
-    else {
+    else
+    {
       this.universityMain.nativeElement.style.marginRight = '300px';
       this.chatSideBar.nativeElement.style.width = '300px';
     }

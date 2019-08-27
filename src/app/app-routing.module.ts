@@ -5,6 +5,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 import { UniversitiesComponent } from './universities/universities.component';
 import { UniversityDetailsComponent } from './university-details/university-details.component';
+import { FacultyDetailsComponent } from './faculty/faculty-details/faculty-details.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'university/:id',
     component: UniversityDetailsComponent
+  },
+  {
+    path: 'faculties/:id',
+    component: FacultyDetailsComponent
   }
 ];
 

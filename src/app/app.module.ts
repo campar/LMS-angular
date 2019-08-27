@@ -15,6 +15,7 @@ import { UniversityDetailsComponent } from './university-details/university-deta
 import { ChatSideBarComponent } from './chat-side-bar/chat-side-bar.component';
 import { FacultiesCardComponent } from './faculties-card/faculties-card.component';
 import { ResponsibleRectorComponent } from './responsible-rector/responsible-rector.component';
+import { FacultyDetailsComponent } from './faculty/faculty-details/faculty-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { ResponsibleRectorComponent } from './responsible-rector/responsible-rec
     UniversityDetailsComponent,
     ChatSideBarComponent,
     FacultiesCardComponent,
-    ResponsibleRectorComponent
+    ResponsibleRectorComponent,
+    FacultyDetailsComponent
   ],
   imports: [
     BrowserModule,
