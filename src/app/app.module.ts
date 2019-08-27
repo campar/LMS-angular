@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { UniversitiesComponent } from './universities/universities.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { UniversityCardComponent } from './university-card/university-card.component';
@@ -16,6 +16,7 @@ import { ChatSideBarComponent } from './chat-side-bar/chat-side-bar.component';
 import { FacultiesCardComponent } from './faculties-card/faculties-card.component';
 import { ResponsibleRectorComponent } from './responsible-rector/responsible-rector.component';
 import { FacultyDetailsComponent } from './faculty/faculty-details/faculty-details.component';
+import { UniversityOverviewComponent } from './university-overview/university-overview.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { FacultyDetailsComponent } from './faculty/faculty-details/faculty-detai
     ChatSideBarComponent,
     FacultiesCardComponent,
     ResponsibleRectorComponent,
-    FacultyDetailsComponent
+    FacultyDetailsComponent,
+    UniversityOverviewComponent
   ],
   imports: [
     BrowserModule,

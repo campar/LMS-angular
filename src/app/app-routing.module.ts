@@ -6,6 +6,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UniversitiesComponent } from './universities/universities.component';
 import { UniversityDetailsComponent } from './university-details/university-details.component';
 import { FacultyDetailsComponent } from './faculty/faculty-details/faculty-details.component';
+import { UniversityOverviewComponent } from './university-overview/university-overview.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,11 @@ const routes: Routes = [
   },
   {
     path: 'university/:id',
-    component: UniversityDetailsComponent
+    component: UniversityOverviewComponent,
+    children: [
+      { path: '', component: UniversityDetailsComponent},
+      { path: 'faculty', component: FacultyDetailsComponent, }
+    ]
   },
   {
     path: 'faculties/:id',
