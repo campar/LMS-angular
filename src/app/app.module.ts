@@ -17,6 +17,18 @@ import { FacultiesCardComponent } from './faculties-card/faculties-card.componen
 import { ResponsibleRectorComponent } from './responsible-rector/responsible-rector.component';
 import { FacultyDetailsComponent } from './faculty/faculty-details/faculty-details.component';
 import { UniversityOverviewComponent } from './university-overview/university-overview.component';
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {MatTabsModule} from '@angular/material/tabs';
+import { SubjectDetailsComponent } from './subject-details/subject-details.component';
+import { SilabusComponent } from './silabus/silabus.component';
+import { AnnouncementComponent } from './announcement/announcement.component';
+
+import {MatExpansionModule} from '@angular/material/expansion';
+import { ExamResultsComponent } from './exam-results/exam-results.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,12 +43,20 @@ import { UniversityOverviewComponent } from './university-overview/university-ov
     FacultiesCardComponent,
     ResponsibleRectorComponent,
     FacultyDetailsComponent,
-    UniversityOverviewComponent
+    UniversityOverviewComponent,
+    SubjectDetailsComponent,
+    SilabusComponent,
+    AnnouncementComponent,
+    ExamResultsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatExpansionModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

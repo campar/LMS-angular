@@ -1,0 +1,36 @@
+.silabus{
+  &__table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+
+    th{
+      background:#f1f1f1;
+      padding:10px;
+    }
+    td{
+      &:first-child{
+        padding-left: 10px;
+      }
+      padding:5px;
+    }
+    &--wrapper{
+      border: 1px solid #dbd6d6;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 50%;
+      margin-top:10px;
+      // position: relative;
+      // left:50%;
+      // transform:translateX(-50%);
+    }
+  }
+
+  &__last-modified{
+    font-size:14px;
+    background:#dfd4fd;
+    span{
+      font-weight: 700;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import { UniversitiesComponent } from './universities/universities.component';
 import { UniversityDetailsComponent } from './university-details/university-details.component';
 import { FacultyDetailsComponent } from './faculty/faculty-details/faculty-details.component';
 import { UniversityOverviewComponent } from './university-overview/university-overview.component';
+import { SubjectDetailsComponent } from './subject-details/subject-details.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
     component: UniversityOverviewComponent,
     children: [
       { path: '', component: UniversityDetailsComponent},
-      { path: 'faculty', component: FacultyDetailsComponent, }
+      { path: 'faculty', component: FacultyDetailsComponent, },
+      { path: 'subject', component: SubjectDetailsComponent}
     ]
   },
   {
