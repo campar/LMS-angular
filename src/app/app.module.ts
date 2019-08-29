@@ -27,8 +27,9 @@ import { AnnouncementComponent } from './announcement/announcement.component';
 
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ExamResultsComponent } from './exam-results/exam-results.component';
+import { TeachingMaterialComponent } from './teaching-material/teaching-material.component';
 
-
+import { TreeModule } from 'angular-tree-component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import { ExamResultsComponent } from './exam-results/exam-results.component';
     SilabusComponent,
     AnnouncementComponent,
     ExamResultsComponent,
+    TeachingMaterialComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ import { ExamResultsComponent } from './exam-results/exam-results.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    TreeModule.forRoot()
 
   ],
   providers: [],

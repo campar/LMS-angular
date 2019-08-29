@@ -1,9 +1,78 @@
 .chat-side-bar{
-  background:red;
+  background:#e4e7ec;
   position: fixed;
   right:0;
   top:0;
   bottom:0;
   width:300px;
   transition: width .35s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chat__messsage--wrapper{
+  padding-left:10px;
+  padding-right:15px;
+  padding-top:20px;
+}
+.chat{
+  &__message{
+    display:flex;
+    align-items: center;
+    flex:1;
+    width: 100%;
+    flex-basis: 100%;
+    margin-top:11px;
+    &:first-child{
+      margin-top:0;
+    }
+  }
+  &__icon{
+    background:red;
+    border-radius:50%;
+    height:35px;
+    width:35px;
+    margin-right:10px;
+    img{
+      height:35px;
+      width:35px;
+      border-radius:50%;
+    }
+
+  }
+  &__time{
+    font-size:13px;
+    color:#9ca2b4;
+  }
+  &__cloud{
+    font-size:13px;
+    border-radius:10px;
+    padding:10px;
+    padding-left:15px;
+    flex-basis: calc(100% - 35px);
+    &--my{
+      background:#dddeef;
+      p{
+        color:#252453;
+      }
+    }
+    &--sender{
+      background:#fff;
+
+      p{
+        color:#252453;
+      }
+    }
+  }
+  &__message-text{
+    margin-top:5px;
+  }
+}
+
+.chat__reply-input{
+  background:#fff;
+  width: 100%;
+  color:#727a88;
+  padding:20px;
+  font-size:13px;
 }

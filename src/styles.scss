@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~angular-tree-component/dist/angular-tree-component.css';
+
+
 
 *{
   margin: 0;
@@ -226,3 +229,82 @@ input::-webkit-inner-spin-button {
       }
     }
   }
+
+  .node-wrapper {
+    align-items: center !important;
+    cursor: default !important;
+  }
+
+  .toggle-children{
+    background-image: url("https://files.slack.com/files-pri/T4UC75PUH-FMUQUK1T2/1.png");
+    // transform: rotate(0) !important;
+    height:40px;
+    width:40px;
+    cursor: pointer !important;
+  }
+
+.toggle-children-wrapper-expanded .toggle-children {
+    transform: rotate(0) !important;
+    background-image: url("https://files.slack.com/files-pri/T4UC75PUH-FMHBPA72P/2.png");
+}
+
+.node-content-wrapper{
+  color: black !important;
+  font-weight: 700;
+  cursor: pointer;
+  span{
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &:hover{
+    background:none !important;
+    box-shadow: none;
+  }
+}
+
+tree-viewport{
+  overflow-y: hidden !important;
+}
+
+.node-content-wrapper-active, .node-content-wrapper.node-content-wrapper-active:hover, .node-content-wrapper-active.node-content-wrapper-focused {
+  background: none !important;
+}
+
+.node-content-wrapper-active, .node-content-wrapper-focused, .node-content-wrapper:hover {
+  box-shadow: none !important;
+}
+
+.node-content-wrapper-focused {
+  background: none !important;
+}
+
+.toggle-children-placeholder{
+  background-image:url("https://files.slack.com/files-pri/T4UC75PUH-FMX1LR79U/document__1_.png");
+
+  background-size:contain;
+  background-repeat: no-repeat;
+  height:25px;
+  width:25px;
+}
+
+tree-node-expander {
+  cursor: pointer;
+  &:hover{
+  + .node-content-wrapper span{
+      text-decoration: underline;
+    }
+  }
+}
+
+.tree-node-leaf{
+  span{
+    font-weight:400;
+    color:#555555;
+    &:hover{
+      text-decoration-color: #555555;
+      // background:none !important;
+      box-shadow: none !important;
+    }
+  }
+}

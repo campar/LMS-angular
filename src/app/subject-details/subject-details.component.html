@@ -1,4 +1,5 @@
 
+<div style="min-height:800px">
 <h1 style="text-align: center">Stranica Predmeta</h1>
 <h3 class="faculty-info__main-header">
   <div style="display:flex">
@@ -16,11 +17,14 @@
    sistema i razumeju njegovo mesto i ulogu u savremenom integrisanom računarskom
    okruženju.
 </p>
+
 <mat-tab-group style="margin-top:20px;" animationDuration="0ms">
   <mat-tab label="Silabus">
     <app-silabus></app-silabus>
   </mat-tab>
-  <mat-tab label="Nastavni Materijal"> Content 3 </mat-tab>
+  <mat-tab label="Nastavni Materijal">
+    <app-teaching-material></app-teaching-material>
+  </mat-tab>
   <mat-tab label="Obavestenja">
     <app-announcement></app-announcement>
   </mat-tab>
@@ -29,3 +33,4 @@
   </mat-tab>
 
 </mat-tab-group>
+</div>
