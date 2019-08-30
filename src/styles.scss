@@ -342,3 +342,16 @@ tree-node-expander {
 //     transition: opacity 340ms ease-out;
 //   }
 // }
+
+.attach-file{
+  position: absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  padding:20px;
+  background:#a8a8a8;
+  cursor:pointer;
+  i{
+    // background:red;
+  }
+}

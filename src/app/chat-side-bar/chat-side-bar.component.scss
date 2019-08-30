@@ -14,7 +14,7 @@
 .chat__messsage--wrapper{
   padding-left:10px;
   padding-right:15px;
-  padding-top:20px;
+  padding-top:15px;
   // overflow-y:scroll;
   height:100%;
   padding-bottom:15px;
@@ -32,14 +32,13 @@
     }
   }
   &__icon{
-    background:red;
     border-radius:50%;
     height:35px;
     width:35px;
     margin-right:10px;
     img{
-      height:35px;
-      width:35px;
+      height:100%;
+      width:100%;
       border-radius:50%;
     }
 
@@ -117,7 +116,7 @@
           left:0;
           right:0;
           height:5px;
-          background:#a8a8a8;
+          background:#a39d9d;
         }
       }
 
