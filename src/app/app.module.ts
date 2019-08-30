@@ -30,6 +30,9 @@ import { ExamResultsComponent } from './exam-results/exam-results.component';
 import { TeachingMaterialComponent } from './teaching-material/teaching-material.component';
 
 import { TreeModule } from 'angular-tree-component';
+
+import { NgScrollbarModule } from 'ngx-scrollbar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +61,8 @@ import { TreeModule } from 'angular-tree-component';
     BrowserAnimationsModule,
     MatTabsModule,
     MatExpansionModule,
-    TreeModule.forRoot()
+    TreeModule.forRoot(),
+    NgScrollbarModule
 
   ],
   providers: [],
