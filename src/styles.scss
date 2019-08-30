@@ -348,9 +348,11 @@ tree-node-expander {
   top:0;
   bottom:0;
   right:0;
-  padding:20px;
+  padding:0px 20px;
   background:#a8a8a8;
   cursor:pointer;
+  display: flex;
+  align-items: center;
   i{
     // background:red;
   }
