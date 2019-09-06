@@ -6,7 +6,7 @@
     </div>
     <div class="university-card__content">
       <div class="university-card__header">
-        SINGIDUNUM
+        {{university.name}}
       </div>
       <div class="university-card__description">
        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe sunt,
@@ -14,7 +14,7 @@
        id culpa, quia corporis corrupti incidunt quibusdam ipsum.
       </div>
       <div class="university-card__button">
-        <button>Više o univerzitetu</button>
+        <button routerLink="/university/{{university.id}}">Više o univerzitetu</button>
       </div>
    </div>
 </div>

@@ -1,5 +1,6 @@
 :host{
   flex: 0 0 calc(33.333333% - 10px);
+  margin-right:10px;
 
   //OBRISATI SVE BACKGROUND ISPOD(SAMO ZA DEMONSTRACIJU)
   &:nth-of-type(2){
@@ -73,6 +74,13 @@
   &__sub-header{
     position: relative;
     display: block;
+    font-size:13px;
+    color:#3d3d3d;
+    overflow: hidden;
+text-overflow: ellipsis;
+-webkit-line-clamp: 2;
+display: -webkit-box;
+-webkit-box-orient: vertical;
   }
   &__group-icons{
     height:50px;

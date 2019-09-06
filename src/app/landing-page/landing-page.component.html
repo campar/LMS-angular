@@ -21,7 +21,7 @@
     </h2>
   </div>
   <div class="university-container wrapper">
-    <app-university-card *ngFor="let university of universities$"></app-university-card>
+    <app-university-card *ngFor="let university of universities$" [university]="university"></app-university-card>
   </div>
 </div>
 <app-footer></app-footer>

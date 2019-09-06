@@ -5,48 +5,12 @@
       <th>Nedelja</th>
       <th>Sadržina</th>
     </tr>
-    <tr>
-      <td>1.</td>
-      <td>Osnovi zaštite informacija</td>
+    <tr *ngFor="let syllabus of syllabusOutcomes$">
+      <td>{{syllabus.period}}</td>
+      <td>{{syllabus.description}}</td>
     </tr>
-    <tr>
-      <td>2.</td>
-      <td>Osnovi zaštite informacija</td>
+    <tr  class="silabus__last-modified">
+      <td colspan="100%"><span>Last modified:</span> Thursday, 14 February 2019, 1:59 PM</td>
     </tr>
-    <tr>
-      <td>3.</td>
-      <td>Osnovi zaštite informacija</td>
-    </tr>
-    <tr>
-      <td>4.</td>
-      <td>Osnovi zaštite informacija</td>
-    <tr>
-    <tr>
-      <td>5.</td>
-      <td>Osnovi zaštite informacija</td>
-    </tr>
-    <tr>
-        <td>6.</td>
-        <td>Osnovi zaštite informacija</td>
-      </tr>
-      <tr>
-        <td>7.</td>
-        <td>Osnovi zaštite informacija</td>
-      </tr>
-      <tr>
-        <td>8.</td>
-        <td>Osnovi zaštite informacija</td>
-      </tr>
-      <tr>
-        <td>9.</td>
-        <td>Osnovi zaštite informacija</td>
-      <tr>
-      <tr>
-        <td>10.</td>
-        <td>Osnovi zaštite informacija</td>
-      </tr>
-      <tr  class="silabus__last-modified">
-        <td colspan="100%"><span>Last modified:</span> Thursday, 14 February 2019, 1:59 PM</td>
-      </tr>
   </table>
 </div>

@@ -1,11 +1,5 @@
 
 <app-responsible-rector></app-responsible-rector>
 <div class="faculties">
-  <app-faculties-card></app-faculties-card>
-  <app-faculties-card></app-faculties-card>
-  <app-faculties-card></app-faculties-card>
-  <app-faculties-card></app-faculties-card>
-  <app-faculties-card></app-faculties-card>
-  <app-faculties-card></app-faculties-card>
-  <app-faculties-card></app-faculties-card>
+  <app-faculties-card *ngFor="let faculty of faculties$" [faculty]="faculty"></app-faculties-card>
 </div>

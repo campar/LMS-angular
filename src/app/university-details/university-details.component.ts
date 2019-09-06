@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { DataService } from '../data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-university-details',
@@ -12,9 +14,17 @@ export class UniversityDetailsComponent implements OnInit {
 
   @ViewChild('chatSideBar', {static: false}) chatSideBar: ElementRef;
   // treba RxJS ja mislim
-  constructor() { }
+  faculties$: object;
+
+  constructor(private data: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    // // console.log('ruta',this.route.snapshot.paramMap.get('id'));
+    const id = this.route.snapshot.paramMap.get('id');
+
+    this.data.getFacultiesByUniversityId(id).subscribe(
+        data => this.faculties$ = data
+      );
   }
 
   open() {
@@ -23,9 +33,7 @@ export class UniversityDetailsComponent implements OnInit {
       this.universityMain.nativeElement.style.marginRight = '0';
       this.chatSideBar.nativeElement.style.width = '0';
 
-    }
-    else
-    {
+    } else {
       this.universityMain.nativeElement.style.marginRight = '300px';
       this.chatSideBar.nativeElement.style.width = '300px';
     }

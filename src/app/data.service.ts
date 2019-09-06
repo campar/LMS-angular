@@ -8,6 +8,23 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getUniversities() {
-    return this.http.get('http://localhost:8080/university');
+    return this.http.get('http://192.168.43.197:8081/university');
   }
+
+  getFacultiesByUniversityId(id) {
+    return this.http.get(`http://192.168.43.197:8081/university/${id}/faculties`);
+  }
+
+  getSubjectById(id) {
+    return this.http.get(`http://192.168.43.197:8081/subjects/${id}`);
+  }
+
+  getFacultyDetails(id) {
+    return this.http.get(`http://192.168.43.197:8081/faculties/${id}`);
+  }
+
+  getStudyPrograme(id) {
+    return this.http.get(`http://192.168.43.197:8081/study-programmes/${id}`);
+  }
+
 }

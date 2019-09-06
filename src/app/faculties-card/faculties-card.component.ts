@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-faculties-card',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./faculties-card.component.scss']
 })
 export class FacultiesCardComponent implements OnInit {
+
+  @Input() faculty: object;
 
   private ANNOUNCEMENT = require('../../assets/images/megaphone.png');
 

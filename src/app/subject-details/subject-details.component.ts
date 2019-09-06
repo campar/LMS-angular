@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-subject-details',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubjectDetailsComponent implements OnInit {
 
-  constructor() { }
+  subject: object;
+
+
+
+  constructor(private data: DataService, private route: ActivatedRoute) { }
+
+
 
   ngOnInit() {
-  }
+    this.subject = {};
+    const id = this.route.snapshot.paramMap.get('id');
 
+    this.data.getSubjectById(id).subscribe(
+        data => this.subject = data
+      );
+  }
 }

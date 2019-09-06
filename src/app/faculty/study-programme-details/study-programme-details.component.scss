@@ -1,0 +1,139 @@
+.table-wrapper__border{
+    border: 1px solid #dbd6d6;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faculty{
+  &__header{
+    margin-bottom:15px;
+    display: flex;
+    align-items: flex-end;
+    color:#363636;
+  }
+  &__table{
+    width: 100%;
+    border-collapse: collapse;
+    color:#363636;
+    a{
+      text-decoration: none;
+      color:#0066b3;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__thead{
+    &--primary{
+      th{
+        background:#f1f1f1;
+        padding:15px;
+        font-weight: 700;
+        font-size:17px;
+        &:first-child{
+          text-align: left;
+          padding-left:20px;
+        }
+      }
+
+    }
+
+    td{
+      background:#eee;
+
+    }
+    &--secondary{
+      th{
+        text-align: left;
+        padding:20px;
+        padding-left:20px;
+        background:#ccc;
+        font-weight: 700;
+        font-size:18px;
+      }
+    }
+  }
+  &__tbody{
+    td{
+      padding:10px;
+      text-align: center;
+
+      &:first-child{
+        text-align: left;
+        padding-left:25px;
+      }
+
+    }
+    &:nth-child(2n){
+      background: #f1f1f1;
+    }
+  }
+}
+
+
+
+.faculty-info{
+  &__wrapper{
+    margin-left:10px;
+    margin-bottom:60px;
+  }
+
+  &__subheader{
+    color:#888;
+    margin-top:10px;
+    &:first-child{
+      margin-top:20px;
+    }
+  }
+  &__header{
+    font-size:18px;
+    font-weight: 500;
+    color:#363636;
+    position: relative;
+    &::after{
+      content:"";
+      height:1px;
+      position:absolute;
+      bottom:-4px;
+      right:0;
+      left:0;
+      background:#e0e0e0;
+    }
+  }
+  &__wrapper{
+   display:flex;
+   justify-content: space-between;
+  }
+  &__left{
+    width:100%;
+  }
+  &__right{
+    margin-top:20px;
+    margin-left:10px;
+  }
+  &__image{
+
+    text-align: center;
+    width:100%;
+
+    img{
+       width:260px;
+       height:150px;
+    }
+    // background-size: 140px 120px;
+  }
+  &__description{
+    margin-top:15px;
+    width:300px;
+    height:128px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: -webkit-box;
+-webkit-line-clamp: 7;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+
+
+  }
+}

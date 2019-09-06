@@ -16,6 +16,7 @@ import { ChatSideBarComponent } from './chat-side-bar/chat-side-bar.component';
 import { FacultiesCardComponent } from './faculties-card/faculties-card.component';
 import { ResponsibleRectorComponent } from './responsible-rector/responsible-rector.component';
 import { FacultyDetailsComponent } from './faculty/faculty-details/faculty-details.component';
+import { StudyProgrammeDetailsComponent } from './faculty/study-programme-details/study-programme-details.component';
 import { UniversityOverviewComponent } from './university-overview/university-overview.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -32,6 +33,10 @@ import { TeachingMaterialComponent } from './teaching-material/teaching-material
 import { TreeModule } from 'angular-tree-component';
 
 import { NgScrollbarModule } from 'ngx-scrollbar';
+
+
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -53,6 +58,7 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     AnnouncementComponent,
     ExamResultsComponent,
     TeachingMaterialComponent,
+    StudyProgrammeDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +68,8 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     MatTabsModule,
     MatExpansionModule,
     TreeModule.forRoot(),
-    NgScrollbarModule
+    NgScrollbarModule,
+    CommonModule
 
   ],
   providers: [],

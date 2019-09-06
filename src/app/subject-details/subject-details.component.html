@@ -4,9 +4,9 @@
 <h3 class="faculty-info__main-header">
   <div style="display:flex">
     <i class="material-icons">menu_book</i>
-    <p>Kriptologija 1</p>
+    <p>{{subject.name}}</p>
   </div>
-    <p class="subject-details__espb">8 ESPB</p>
+    <p class="subject-details__espb">{{subject.espb}} ESPB</p>
 </h3>
 <p class="subject-details__description">Na ovom predmetu studenti stiču neophodna znanja iz osnova zaštite
   informacionih sistema uz primenu matematičkog aparata koji je potreban
@@ -20,7 +20,7 @@
 
 <mat-tab-group style="margin-top:20px;" animationDuration="0ms">
   <mat-tab label="Silabus">
-    <app-silabus></app-silabus>
+    <app-silabus [syllabusOutcomes$]="subject.syllabusOutcomes"></app-silabus>
   </mat-tab>
   <mat-tab label="Nastavni Materijal">
     <app-teaching-material></app-teaching-material>

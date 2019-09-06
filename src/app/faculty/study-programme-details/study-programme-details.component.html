@@ -1,0 +1,75 @@
+<h2 class="faculty-info__main-header">
+    <div style="display:flex">
+      <i class="material-icons">info</i>
+      <p>Osnovne informacije</p>
+    </div>
+
+</h2>
+<div class="faculty-info__wrapper">
+    <div class="faculty-info__left">
+      <div class="faculty-info__subheader">
+        Nivo studija
+      </div>
+      <div class="faculty-info__header">
+          Osnovne akademske studije
+      </div>
+      <div class="faculty-info__subheader">
+          Zvanje koje se stiče
+        </div>
+        <div class="faculty-info__header">
+            Diplomirani inženjer elektrotehnike i računarstva (Dipl. inž. el.tehn i rač.)
+      </div>
+      <div class="faculty-info__subheader">
+          Trajanje (god/sem)
+        </div>
+        <div class="faculty-info__header">
+            4 / 8
+      </div>
+      <div class="faculty-info__subheader">
+          Ukupan broj ESPB bodova
+        </div>
+        <div class="faculty-info__header">
+          240
+      </div>
+
+    </div>
+    <div class="faculty-info__right">
+      <div class="faculty-info__image">
+        <img src="http://www.ftn.uns.ac.rs/n2056385208" alt="">
+      </div>
+      <div class="faculty-info__description">
+        {{studyProgramme$.description}}
+      </div>
+    </div>
+  </div>
+<app-responsible-rector [professor]="studyProgramme$.director"></app-responsible-rector>
+<h3 class="faculty__header"><i class="material-icons">file_copy</i>
+  <p>Plan studijstog programa</p>
+</h3>
+<div class="table-wrapper__border">
+    <table class="faculty__table">
+      <tr class="faculty__thead--primary">
+        <th>Predmet</th>
+        <th>Pr.</th>
+        <th>Aud.</th>
+        <th>DON</th>
+        <th>Ost.</th>
+        <th>ESPB</th>
+        <!-- <th>Izv.</th> -->
+      </tr>
+      <tbody *ngFor="let yearsOfStudy of studyProgramme$.yearsOfStudy">
+      <tr class="faculty__thead--secondary">
+        <th colspan="100%">GODINA {{yearsOfStudy.year}}</th>
+      </tr>
+      <tr class="faculty__tbody" *ngFor="let subject of yearsOfStudy.subjects">
+        <td><a href="#" routerLink="/university/1/subject/{{subject.id}}">{{subject.name}}</a></td>
+        <td>{{subject.numberOfLectures}}</td>
+        <td>{{subject.numberOfExercises}}</td>
+        <td>{{subject.differentKindOfLectures}}</td>
+        <td>{{subject.otherClasses}}</td>
+        <td>{{subject.espb}}</td>
+        <!-- <td>7</td> -->
+      </tr>
+        </tbody>
+    </table>
+</div>
