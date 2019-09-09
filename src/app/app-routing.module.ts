@@ -49,6 +49,10 @@ const routes: Routes = [
   {
     path: 'faculties/:id',
     component: FacultyDetailsComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 

@@ -1,22 +1,32 @@
-<div>
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <div>
-      <label for="username">Username</label>
-      <input type="text" formControlName="username" />
-      <div *ngIf="submitted && loginForm.controls.username.errors">
-        <div *ngIf="loginForm.controls.username.errors.required">Username is required</div>
+<div class="login">
+  <div class="login__card-wrapper">
+      <img [src]="LMSLOGO" alt="">
+    <div class="login__card">
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div>
+            <label for="username">Username</label>
+            <input type="text" formControlName="username" />
+            <div *ngIf="submitted && loginForm.controls.username.errors">
+              <div *ngIf="loginForm.controls.username.errors.required" class="form__required">Username is required</div>
+            </div>
+          </div>
+          <div style="margin-top:10px;">
+            <label for="password">Password</label>
+            <div class="input__wrapper">
+            <input type="{{type}}" formControlName="password" />
+            <div class="input__show"(click)="toggleShow()" *ngIf="!show">Show</div>
+            <div class="input__show"(click)="toggleShow()" *ngIf="show">Hide</div>
+            </div>
+            <div *ngIf="submitted && loginForm.controls.password.errors">
+              <div *ngIf="loginForm.controls.password.errors.required" class="form__required">Password is required</div>
+            </div>
+          </div>
+          <button [disabled]="loading">
+            Login
+          </button>
+          <div *ngIf="error" class="form__error">{{error}}</div>
+        </form>
       </div>
-    </div>
-    <div>
-      <label for="password">Password</label>
-      <input type="password" formControlName="password" />
-      <div *ngIf="submitted && loginForm.controls.password.errors">
-        <div *ngIf="loginForm.controls.password.errors.required">Password is required</div>
-      </div>
-    </div>
-    <button [disabled]="loading">
-      Login
-    </button>
-    <div *ngIf="error">{{error}}</div>
-  </form>
+  </div>
 </div>

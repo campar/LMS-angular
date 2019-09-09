@@ -10,9 +10,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
   loginForm: FormGroup;
   submitted = false;
   error = '';
+  type = 'password';
+  show = false;
+
+  private LMSLOGO = require('../../assets/images/LMS-logo.png');
 
   constructor(
     private formBuilder: FormBuilder,
@@ -45,4 +50,12 @@ export class LoginComponent implements OnInit {
       });
     }
 
+    toggleShow() {
+        this.show = !this.show;
+        if (this.show) {
+            this.type = 'text';
+        } else {
+            this.type = 'password';
+        }
+    }
   }
