@@ -41,6 +41,7 @@ import { SidebarWrapperComponent } from './sidebar-wrapper/sidebar-wrapper.compo
 import { LoginComponent } from './login/login.component';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CreateProfessorComponent } from './administrator/create-professor/create-professor.component';
 
 
 @NgModule({
@@ -67,6 +68,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AdminPanelComponent,
     SidebarWrapperComponent,
     LoginComponent,
+    CreateProfessorComponent,
   ],
   imports: [
     BrowserModule,
