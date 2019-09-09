@@ -36,14 +36,11 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 
 
 import { CommonModule } from '@angular/common';
-<<<<<<< HEAD
 import { AdminPanelComponent } from './administrator/admin-panel/admin-panel.component';
 import { SidebarWrapperComponent } from './sidebar-wrapper/sidebar-wrapper.component';
-=======
 import { LoginComponent } from './login/login.component';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { ReactiveFormsModule } from '@angular/forms';
->>>>>>> 02dcd64a3c211cb203207fff69d2864509d383d8
 
 
 @NgModule({
@@ -67,12 +64,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ExamResultsComponent,
     TeachingMaterialComponent,
     StudyProgrammeDetailsComponent,
-<<<<<<< HEAD
     AdminPanelComponent,
-    SidebarWrapperComponent
-=======
-    LoginComponent
->>>>>>> 02dcd64a3c211cb203207fff69d2864509d383d8
+    SidebarWrapperComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
