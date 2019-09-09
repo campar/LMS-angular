@@ -3,31 +3,31 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
 
-              <li class="nav-item">
-                  <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-                      <button class="btn btn-outline-success" ngbDropdownToggle>Kreiraj</button>
+              <li class="nav-item nav-item--success">
+                  <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                      <button class="btn btn-outline-success color-white" ngbDropdownToggle>Kreiraj</button>
                       <div class="dropdown-menu" ngbDropdownMenu>
-                        <button ngbDropdownItem>Profesora</button>
+                        <button routerLink="/admin/kreirajProfesora" routerLinkActive="is-active" ngbDropdownItem> <span class="color-white">Profesora</span></button>
                         <button ngbDropdownItem>Two</button>
                         <button ngbDropdownItem>Four!</button>
                       </div>
                     </div>
               </li>
-              <li class="nav-item">
-                  <div ngbDropdown>
-                      <button class="btn btn-outline-primary" id="dropdownConfig" ngbDropdownToggle>Užuriraj</button>
+              <li class="nav-item nav-item--primary">
+                  <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                      <button class="btn btn-outline-primary color-white" id="dropdownConfig" ngbDropdownToggle>Užuriraj</button>
                       <div ngbDropdownMenu aria-labelledby="dropdownConfig">
                         <button ngbDropdownItem>Profesora</button>
-                        <button ngbDropdownItem>Another Action</button>
+                        <button routerLink="/admin/azurirajStudenta" routerLinkActive="is-active" ngbDropdownItem><span class="color-white">Studenta</span></button>
                         <button ngbDropdownItem>Something else is here</button>
                       </div>
                     </div>
               </li>
-              <li class="nav-item">
-                  <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-                      <button class="btn btn-outline-danger" ngbDropdownToggle>Obriši</button>
+              <li class="nav-item nav-item--destroy">
+                  <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                      <button class="btn btn-outline-danger color-white" ngbDropdownToggle>Obriši</button>
                       <div class="dropdown-menu" ngbDropdownMenu>
-                        <button ngbDropdownItem>Profesora</button>
+                        <button routerLink="/admin/obrisiProfesora" routerLinkActive="is-active" ngbDropdownItem><span class="color-white">Profesora</span></button>
                         <button ngbDropdownItem>Two</button>
                         <button ngbDropdownItem>Four!</button>
                       </div>

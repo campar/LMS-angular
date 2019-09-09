@@ -44,7 +44,7 @@ const routes: Routes = [
     path: 'admin',
     component: AdminSidebarWrapperComponent,
     children: [
-      { path: 'kreirajProfesora', component: CreateProfessorComponent, },
+      { path: 'obrisiProfesora', component: CreateProfessorComponent, },
     ]
   },
   {

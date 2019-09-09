@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-admin-nav-bar',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminNavBarComponent implements OnInit {
 
+  @Input()
+  routerLinkActive: {
+      exact: boolean;
+  };
+
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
