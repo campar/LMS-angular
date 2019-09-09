@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UniversitiesComponent } from './universities/universities.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { UniversityCardComponent } from './university-card/university-card.component';
@@ -36,8 +36,14 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 
 
 import { CommonModule } from '@angular/common';
+<<<<<<< HEAD
 import { AdminPanelComponent } from './administrator/admin-panel/admin-panel.component';
 import { SidebarWrapperComponent } from './sidebar-wrapper/sidebar-wrapper.component';
+=======
+import { LoginComponent } from './login/login.component';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { ReactiveFormsModule } from '@angular/forms';
+>>>>>>> 02dcd64a3c211cb203207fff69d2864509d383d8
 
 
 @NgModule({
@@ -61,11 +67,16 @@ import { SidebarWrapperComponent } from './sidebar-wrapper/sidebar-wrapper.compo
     ExamResultsComponent,
     TeachingMaterialComponent,
     StudyProgrammeDetailsComponent,
+<<<<<<< HEAD
     AdminPanelComponent,
     SidebarWrapperComponent
+=======
+    LoginComponent
+>>>>>>> 02dcd64a3c211cb203207fff69d2864509d383d8
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -74,9 +85,11 @@ import { SidebarWrapperComponent } from './sidebar-wrapper/sidebar-wrapper.compo
     TreeModule.forRoot(),
     NgScrollbarModule,
     CommonModule
-
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
