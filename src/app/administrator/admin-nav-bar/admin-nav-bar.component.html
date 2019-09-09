@@ -1,0 +1,42 @@
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+              <li class="nav-item">
+                  <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                      <button class="btn btn-outline-success" ngbDropdownToggle>Kreiraj</button>
+                      <div class="dropdown-menu" ngbDropdownMenu>
+                        <button ngbDropdownItem>Profesora</button>
+                        <button ngbDropdownItem>Two</button>
+                        <button ngbDropdownItem>Four!</button>
+                      </div>
+                    </div>
+              </li>
+              <li class="nav-item">
+                  <div ngbDropdown>
+                      <button class="btn btn-outline-primary" id="dropdownConfig" ngbDropdownToggle>Užuriraj</button>
+                      <div ngbDropdownMenu aria-labelledby="dropdownConfig">
+                        <button ngbDropdownItem>Profesora</button>
+                        <button ngbDropdownItem>Another Action</button>
+                        <button ngbDropdownItem>Something else is here</button>
+                      </div>
+                    </div>
+              </li>
+              <li class="nav-item">
+                  <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                      <button class="btn btn-outline-danger" ngbDropdownToggle>Obriši</button>
+                      <div class="dropdown-menu" ngbDropdownMenu>
+                        <button ngbDropdownItem>Profesora</button>
+                        <button ngbDropdownItem>Two</button>
+                        <button ngbDropdownItem>Four!</button>
+                      </div>
+                    </div>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Pretraga" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pretraga</button>
+            </form>
+          </div>
+        </nav>

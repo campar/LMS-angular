@@ -42,6 +42,11 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreateProfessorComponent } from './administrator/create-professor/create-professor.component';
 
+import { FormsModule} from '@angular/forms';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AdminNavBarComponent } from './administrator/admin-nav-bar/admin-nav-bar.component';
+import { AdminSidebarWrapperComponent } from './administrator/admin-sidebar-wrapper/admin-sidebar-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -67,10 +72,13 @@ import { CreateProfessorComponent } from './administrator/create-professor/creat
     SidebarWrapperComponent,
     LoginComponent,
     CreateProfessorComponent,
+    AdminNavBarComponent,
+    AdminSidebarWrapperComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -78,7 +86,8 @@ import { CreateProfessorComponent } from './administrator/create-professor/creat
     MatExpansionModule,
     TreeModule.forRoot(),
     NgScrollbarModule,
-    CommonModule
+    CommonModule,
+    NgbModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

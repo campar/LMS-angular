@@ -1,0 +1,40 @@
+.nav-item{
+  margin-right:20px;
+  &:first-child{
+    margin-left:4px;
+  }
+}
+
+.navbar{
+  margin-bottom:30px;
+}
+
+
+
+
+
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.btn-outline-danger {
+  &:focus {
+    outline: none;
+    border: 1px solid #dc3545 !important;
+  }
+}
+
+.btn-outline-primary {
+  &:focus {
+    outline: none;
+    border: 1px solid #007bff !important;
+  }
+}
+
+.btn-outline-success {
+  &:focus {
+    outline: none;
+    border: 1px solid #28a745 !important;
+  }
+}

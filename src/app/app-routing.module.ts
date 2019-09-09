@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './_helpers';
 import { Role } from './_models';
 import { CreateProfessorComponent } from './administrator/create-professor/create-professor.component';
+import { AdminSidebarWrapperComponent } from './administrator/admin-sidebar-wrapper/admin-sidebar-wrapper.component';
 
 const routes: Routes = [
   {
@@ -41,7 +42,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    component: SidebarWrapperComponent,
+    component: AdminSidebarWrapperComponent,
     children: [
       { path: 'kreirajProfesora', component: CreateProfessorComponent, },
     ]
