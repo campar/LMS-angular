@@ -14,6 +14,11 @@ import { AuthGuard } from './_helpers';
 import { Role } from './_models';
 import { CreateProfessorComponent } from './administrator/create-professor/create-professor.component';
 import { AdminSidebarWrapperComponent } from './administrator/admin-sidebar-wrapper/admin-sidebar-wrapper.component';
+import { DeleteProfessorComponent } from './administrator/delete-professor/delete-professor.component';
+import { UpdateStudentComponent } from './administrator/update-student/update-student.component';
+import { UpdateProfessorComponent } from './administrator/update-professor/update-professor.component';
+import { CreateStudentComponent } from './administrator/create-student/create-student.component';
+import { DeleteStudentComponent } from './administrator/delete-student/delete-student.component';
 
 const routes: Routes = [
   {
@@ -44,7 +49,12 @@ const routes: Routes = [
     path: 'admin',
     component: AdminSidebarWrapperComponent,
     children: [
-      { path: 'obrisiProfesora', component: CreateProfessorComponent, },
+      { path: 'kreirajProfesora', component: CreateProfessorComponent, },
+      { path: 'azurirajProfesora', component: UpdateProfessorComponent, },
+      { path: 'obrisiProfesora', component: DeleteProfessorComponent, },
+      { path: 'kreirajStudenta', component: CreateStudentComponent, },
+      { path: 'azurirajStudenta', component: UpdateStudentComponent, },
+      { path: 'obrisiStudenta', component: DeleteStudentComponent, },
     ]
   },
   {
