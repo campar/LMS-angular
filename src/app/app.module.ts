@@ -36,6 +36,8 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 
 
 import { CommonModule } from '@angular/common';
+import { AdminPanelComponent } from './administrator/admin-panel/admin-panel.component';
+import { SidebarWrapperComponent } from './sidebar-wrapper/sidebar-wrapper.component';
 
 
 @NgModule({
@@ -58,7 +60,9 @@ import { CommonModule } from '@angular/common';
     AnnouncementComponent,
     ExamResultsComponent,
     TeachingMaterialComponent,
-    StudyProgrammeDetailsComponent
+    StudyProgrammeDetailsComponent,
+    AdminPanelComponent,
+    SidebarWrapperComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,8 @@ import { FacultyDetailsComponent } from './faculty/faculty-details/faculty-detai
 import { StudyProgrammeDetailsComponent } from './faculty/study-programme-details/study-programme-details.component';
 import { UniversityOverviewComponent } from './university-overview/university-overview.component';
 import { SubjectDetailsComponent } from './subject-details/subject-details.component';
+import { AdminPanelComponent } from './administrator/admin-panel/admin-panel.component';
+import { SidebarWrapperComponent } from './sidebar-wrapper/sidebar-wrapper.component';
 
 const routes: Routes = [
   {
@@ -21,12 +23,20 @@ const routes: Routes = [
   },
   {
     path: 'university/:id',
-    component: UniversityOverviewComponent,
+    component: SidebarWrapperComponent,
     children: [
       { path: '', component: UniversityDetailsComponent},
       { path: 'studyProgramme/:id', component: StudyProgrammeDetailsComponent, },
       { path: 'subject/:id', component: SubjectDetailsComponent},
-      { path: 'faculty/:id', component: FacultyDetailsComponent}
+      { path: 'faculty/:id', component: FacultyDetailsComponent},
+      { path: 'admin-panel', component: AdminPanelComponent}
+    ]
+  },
+  {
+    path: 'admin',
+    component: SidebarWrapperComponent,
+    children: [
+      { path: 'kreirajProfesora', component: AdminPanelComponent, },
     ]
   },
   {
