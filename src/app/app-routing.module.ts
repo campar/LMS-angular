@@ -8,7 +8,6 @@ import { FacultyDetailsComponent } from './faculty/faculty-details/faculty-detai
 import { StudyProgrammeDetailsComponent } from './faculty/study-programme-details/study-programme-details.component';
 import { UniversityOverviewComponent } from './university-overview/university-overview.component';
 import { SubjectDetailsComponent } from './subject-details/subject-details.component';
-import { AdminPanelComponent } from './administrator/admin-panel/admin-panel.component';
 import { SidebarWrapperComponent } from './sidebar-wrapper/sidebar-wrapper.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './_helpers';
@@ -38,7 +37,6 @@ const routes: Routes = [
       { path: 'studyProgramme/:id', component: StudyProgrammeDetailsComponent, },
       { path: 'subject/:id', component: SubjectDetailsComponent},
       { path: 'faculty/:id', component: FacultyDetailsComponent},
-      { path: 'admin-panel', component: AdminPanelComponent}
     ]
   },
   {

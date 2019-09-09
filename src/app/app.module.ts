@@ -36,7 +36,6 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 
 
 import { CommonModule } from '@angular/common';
-import { AdminPanelComponent } from './administrator/admin-panel/admin-panel.component';
 import { SidebarWrapperComponent } from './sidebar-wrapper/sidebar-wrapper.component';
 import { LoginComponent } from './login/login.component';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
@@ -65,7 +64,6 @@ import { CreateProfessorComponent } from './administrator/create-professor/creat
     ExamResultsComponent,
     TeachingMaterialComponent,
     StudyProgrammeDetailsComponent,
-    AdminPanelComponent,
     SidebarWrapperComponent,
     LoginComponent,
     CreateProfessorComponent,
