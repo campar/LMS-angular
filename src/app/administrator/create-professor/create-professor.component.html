@@ -1,15 +1,31 @@
 <div class="admin-panel">
   <h3>Kreiraj Profesora</h3>
-  <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email adresa</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-        <small id="emailHelp" class="form-text text-muted">Nikada nećemo deliti vaš email sa trećim licima</small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Lozinka</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Lozinka">
-      </div>
-      <button type="submit" class="btn btn-primary">Kreiraj</button>
-    </form>
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Ime</label>
+      <input type="text" class="form-control" id="name" placeholder="Ime" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="jmbg">JMBG</label>
+      <input type="text" class="form-control" id="jmbg" placeholder="Jmbg" formControlName="jmbg">
+    </div>
+    <div class="form-group">
+      <label for="username">Korisnicko ime</label>
+      <input type="text" class="form-control" id="username" placeholder="Korisnicko ime" formControlName="username">
+    </div>
+    <div class="form-group">
+      <label for="biography">Biografija</label>
+      <input type="text" class="form-control" id="biography" placeholder="Biografija" formControlName="biography">
+    </div>
+    <div class="form-group">
+      <label for="email">Email adresa</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" formControlName="email">
+      <small id="emailHelp" class="form-text text-muted">Nikada nećemo deliti vaš email sa trećim licima</small>
+    </div>
+    <div class="form-group">
+      <label for="password">Lozinka</label>
+      <input type="password" class="form-control" id="password" placeholder="Lozinka" formControlName="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Kreiraj</button>
+  </form>
 </div>
