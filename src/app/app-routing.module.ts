@@ -19,6 +19,8 @@ import { UpdateStudentComponent } from './administrator/update-student/update-st
 import { UpdateProfessorComponent } from './administrator/update-professor/update-professor.component';
 import { CreateStudentComponent } from './administrator/create-student/create-student.component';
 import { DeleteStudentComponent } from './administrator/delete-student/delete-student.component';
+import { ProfesorSidebarWrapperComponent } from './profesor/profesor-sidebar-wrapper/profesor-sidebar-wrapper.component';
+import { PregledStudenataComponent } from './profesor/pregled-studenata/pregled-studenata.component';
 
 const routes: Routes = [
   {
@@ -50,19 +52,20 @@ const routes: Routes = [
     component: AdminSidebarWrapperComponent,
     children: [
       { path: 'kreirajProfesora', component: CreateProfessorComponent, },
-      // { path: 'azurirajProfesora', component: UpdateProfessorComponent, },
+      { path: 'azurirajProfesora', component: UpdateProfessorComponent, },
       { path: 'upravljajProfesorom', component: DeleteProfessorComponent, },
       { path: 'kreirajStudenta', component: CreateStudentComponent, },
-      // { path: 'azurirajStudenta', component: UpdateStudentComponent, },
+      { path: 'azurirajStudenta', component: UpdateStudentComponent, },
       { path: 'upravljajStudentom', component: DeleteStudentComponent, },
     ]
   },
   {
     path: 'profesorPanel',
-    component: AdminSidebarWrapperComponent,
+    component: ProfesorSidebarWrapperComponent,
     children: [
-      { path: 'uredjivanjeSilabusu', component: CreateProfessorComponent, },
+      { path: 'upravljanjeSilabusa', component: CreateProfessorComponent, },
       { path: 'upravljanjeObavestenjima', component: UpdateProfessorComponent, },
+      { path: 'pregledStudenata', component: PregledStudenataComponent, },
     ]
   },
   {
