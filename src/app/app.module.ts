@@ -22,6 +22,9 @@ import { UniversityOverviewComponent } from './university-overview/university-ov
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatTabsModule} from '@angular/material/tabs';
+
+
+
 import { SubjectDetailsComponent } from './subject-details/subject-details.component';
 import { SilabusComponent } from './silabus/silabus.component';
 import { AnnouncementComponent } from './announcement/announcement.component';
@@ -52,6 +55,9 @@ import { UpdateStudentComponent } from './administrator/update-student/update-st
 import { DeleteStudentComponent } from './administrator/delete-student/delete-student.component';
 import { UpdateProfessorComponent } from './administrator/update-professor/update-professor.component';
 import { CreateStudentComponent } from './administrator/create-student/create-student.component';
+
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 
 @NgModule({
   declarations: [
@@ -97,7 +103,8 @@ import { CreateStudentComponent } from './administrator/create-student/create-st
     TreeModule.forRoot(),
     NgScrollbarModule,
     CommonModule,
-    NgbModule
+    NgbModule,
+    MatTooltipModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

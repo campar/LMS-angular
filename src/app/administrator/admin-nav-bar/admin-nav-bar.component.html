@@ -14,14 +14,14 @@
               </li>
               <li class="nav-item nav-item--primary">
                   <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-                      <button class="btn btn-outline-primary color-white" id="dropdownConfig" ngbDropdownToggle>Užuriraj</button>
+                      <button class="btn btn-outline-primary color-white" id="dropdownConfig" ngbDropdownToggle>Upravljaj</button>
                       <div ngbDropdownMenu aria-labelledby="dropdownConfig">
-                          <button routerLink="/admin/azurirajProfesora" routerLinkActive="is-active" ngbDropdownItem><span>Profesora</span></button>
-                        <button routerLink="/admin/azurirajStudenta" routerLinkActive="is-active" ngbDropdownItem><span>Studenta</span></button>
+                          <button routerLink="/admin/upravljajProfesorom" routerLinkActive="is-active" ngbDropdownItem><span>Profesorom</span></button>
+                        <button routerLink="/admin/upravljajStudentom" routerLinkActive="is-active" ngbDropdownItem><span>Studentom</span></button>
                       </div>
                     </div>
               </li>
-              <li class="nav-item nav-item--destroy">
+              <!-- <li class="nav-item nav-item--destroy">
                   <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
                       <button class="btn btn-outline-danger color-white" ngbDropdownToggle>Obriši</button>
                       <div class="dropdown-menu" ngbDropdownMenu>
@@ -29,7 +29,7 @@
                         <button routerLink="/admin/obrisiStudenta" routerLinkActive="is-active" ngbDropdownItem><span>Studenta</span></button>
                       </div>
                     </div>
-              </li>
+              </li> -->
             </ul>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Pretraga" aria-label="Search">

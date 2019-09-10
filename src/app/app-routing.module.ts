@@ -50,11 +50,19 @@ const routes: Routes = [
     component: AdminSidebarWrapperComponent,
     children: [
       { path: 'kreirajProfesora', component: CreateProfessorComponent, },
-      { path: 'azurirajProfesora', component: UpdateProfessorComponent, },
-      { path: 'obrisiProfesora', component: DeleteProfessorComponent, },
+      // { path: 'azurirajProfesora', component: UpdateProfessorComponent, },
+      { path: 'upravljajProfesorom', component: DeleteProfessorComponent, },
       { path: 'kreirajStudenta', component: CreateStudentComponent, },
-      { path: 'azurirajStudenta', component: UpdateStudentComponent, },
-      { path: 'obrisiStudenta', component: DeleteStudentComponent, },
+      // { path: 'azurirajStudenta', component: UpdateStudentComponent, },
+      { path: 'upravljajStudentom', component: DeleteStudentComponent, },
+    ]
+  },
+  {
+    path: 'profesorPanel',
+    component: AdminSidebarWrapperComponent,
+    children: [
+      { path: 'uredjivanjeSilabusu', component: CreateProfessorComponent, },
+      { path: 'upravljanjeObavestenjima', component: UpdateProfessorComponent, },
     ]
   },
   {
