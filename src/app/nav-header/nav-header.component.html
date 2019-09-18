@@ -1,10 +1,35 @@
-<div class="nav-header__wrapper">
-  <ul>
-    <li>Logo</li>
-    <li>Universities</li>
-    <li>About Us</li>
-    <li>Contact</li>
-    <li>Search</li>
-    <li><a routerLink="/login">Login</a></li>
+<div class="nav-header__wrapper ">
+  <div class="main-header">
+
+
+  <ul class="nav-header__ul wrapper">
+    <li>
+      <img src="http://localhost:4200/LMS-logo.png" alt="">
+    </li>
+    <li>
+      <ul class="nav-header__ul--2">
+        <li [scrollTo]="'#univerziteti'" [scrollOffset]="-50"><i class="material-icons" style="margin-left:0; margin-right:5px;">
+            apartment
+            </i>Univerziteti</li>
+        <li>O Nama<i class="material-icons">
+            info
+            </i></li>
+        <li>Podrska<i class="material-icons">
+            contact_support
+            </i></li>
+        <li>Admin Panel<i class="material-icons">
+            settings_applications
+            </i></li>
+        <li>
+          <a routerLink="/login" class="button-header">
+            Login
+            <i class="material-icons">
+              exit_to_app
+            </i>
+          </a>
+        </li>
+      </ul>
+    </li>
   </ul>
+</div>
 </div>

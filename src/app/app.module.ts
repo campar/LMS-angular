@@ -74,7 +74,7 @@ import { CreateNotificationComponent } from './profesor/create-notification/crea
 // import { HttpClientModule} from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 
-
+import { ScrollToModule } from 'ng2-scroll-to-el';
 
 
 @NgModule({
@@ -134,7 +134,8 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     CommonModule,
     NgbModule,
     MatTooltipModule,
-    AngularEditorModule
+    AngularEditorModule,
+    ScrollToModule.forRoot()
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -2,7 +2,7 @@
 <div class="landing__content">
 
 
-  <div class="student-number-info">
+  <div class="student-number-info" >
     <i class="material-icons">people</i> Imamo <span>2,000.132</span> registrovanih studenata
   </div>
   <!-- <div class="wrapper"> -->
@@ -14,12 +14,12 @@
         sapiente fugit deleniti maiores hic mollitia, eos odio nemo nostrum
         autem soluta provident natus ad.
       </p>
-      <button>Pogledajte spisak univerziteta</button>
+      <button [scrollTo]="'#univerziteti'" [scrollOffset]="-50">Pogledajte spisak univerziteta</button>
     </div>
   </div>
   <div style="background:#e4e5e7;">
-    <div class="wrapper">
-      <h2 class="university__header">
+    <div class="wrapper"  id="univerziteti">
+      <h2 class="university__header" >
         Spisak univerziteta
       </h2>
     </div>
