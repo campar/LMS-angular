@@ -57,6 +57,10 @@ import { UpdateProfessorComponent } from './administrator/update-professor/updat
 import { CreateStudentComponent } from './administrator/create-student/create-student.component';
 
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { ProfesorNavBarComponent } from './profesor/profesor-nav-bar/profesor-nav-bar.component';
+import { PregledStudenataComponent } from './profesor/pregled-studenata/pregled-studenata.component';
+import { ProfesorSidebarWrapperComponent } from './profesor/profesor-sidebar-wrapper/profesor-sidebar-wrapper.component';
+import { NaprednaPretragaComponent } from './napredna-pretraga/napredna-pretraga.component';
 
 
 @NgModule({
@@ -90,6 +94,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     DeleteStudentComponent,
     UpdateProfessorComponent,
     CreateStudentComponent,
+    ProfesorNavBarComponent,
+    PregledStudenataComponent,
+    ProfesorSidebarWrapperComponent,
+    NaprednaPretragaComponent,
   ],
   imports: [
     BrowserModule,
