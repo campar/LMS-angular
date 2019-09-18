@@ -1,0 +1,14 @@
+<div class="admin-panel">
+  <h3>Kreiraj Obavestenje</h3>
+  <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Naslov</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Naslov">
+      </div>
+
+      <label>Sadrzaj</label>
+      <angular-editor [placeholder]="'blabla'" [config]="config"></angular-editor>
+
+      <button type="submit" class="btn btn-primary" style="margin-top:15px;">Kreiraj</button>
+    </form>
+</div>

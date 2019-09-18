@@ -1,0 +1,88 @@
+<div class="discussion__container">
+  <div class="discussion__header">
+
+    <div class="header__back-arrow">
+        <i class="material-icons">
+            keyboard_backspace
+            </i>
+    </div>
+    <div class="header__title">
+      Diskusija sa <a href="#" routerLink="/profesorPanel/pregledStudenata/1">Pera Peric</a>
+    </div>
+    <label class="switch">
+        <input #chatBox type="checkbox" checked  (click)="open()">
+        <span class="slider round"></span>
+      </label>
+
+  </div>
+  <ng-scrollbar [visibility]="'hover'" >
+  <div class="discussion__chat" >
+
+    <div class="discussion__message">
+        <div class="discussion__message-avatar">
+            <img src="http://www.ftn.uns.ac.rs/n1524913729" alt="">
+          </div>
+          <div class="discussion__message-content tri-right left-top">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nisi hic recusandae reiciendis natus deserunt autem eligendi, dignissimos molestiae animi accusantium nam sint et iusto obcaecati repudiandae, repellendus est exercitationem?
+            <div class="discussion__message-listener">
+              <a href="" routerLink="/profesorPanel/pregledStudenata/1">Pera Peric</a>
+            </div>
+          </div>
+    </div>
+    <div class="discussion__message discussion__message--you">
+        <div class="discussion__message-avatar discussion__message-avatar--you">
+            <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+          </div>
+          <div class="discussion__message-content  tri-right left-top">
+            Lorem ipsum dolor sit amet consectetur , dignissimos molestiae animi accusantium nam sint et iusto obcaecati repudiandae, repellendus est exercitationem?
+            <div class="discussion__message-listener">
+                <a href="" routerLink="/profesorPanel/pregledStudenata/1">Leposava Lepic</a>
+            </div>
+          </div>
+    </div>
+
+    <div class="discussion__message">
+        <div class="discussion__message-avatar">
+            <img src="http://www.ftn.uns.ac.rs/n1524913729" alt="">
+          </div>
+          <div class="discussion__message-content  tri-right left-top">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nisi hic recusandae reiciendis natus deserunt autem eligendi, dignissimos molestiae animi accusantium nam sint et iusto obcaecati repudiandae, repellendus est exercitationem?
+            <div class="discussion__message-listener">
+                <a href="" routerLink="/profesorPanel/pregledStudenata/1">Pera Peric</a>
+            </div>
+          </div>
+    </div>
+    <div class="discussion__message">
+        <div class="discussion__message-avatar">
+            <img src="http://www.ftn.uns.ac.rs/n1524913729" alt="">
+          </div>
+          <div class="discussion__message-content  tri-right left-top">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nisi hic recusandae reiciendis natus deserunt autem eligendi, dignissimos molestiae animi accusantium nam sint et iusto obcaecati repudiandae, repellendus est exercitationem?
+            <div class="discussion__message-listener">
+                <a href="" routerLink="/profesorPanel/pregledStudenata/1">Pera Peric</a>
+            </div>
+          </div>
+    </div>
+    <div class="discussion__message discussion__message--you">
+        <div class="discussion__message-avatar discussion__message-avatar--you">
+            <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+          </div>
+          <div class="discussion__message-content  tri-right left-top">
+            Lorem ipsum dolor sit amet consectetur , dignissimos molestiae animi accusantium nam sint et iusto obcaecati repudiandae, repellendus est exercitationem?
+            <div class="discussion__message-listener">
+                <a href="" routerLink="/profesorPanel/pregledStudenata/1">Leposava Lepic</a>
+            </div>
+          </div>
+    </div>
+
+  </div>
+</ng-scrollbar>
+  <div class="discussion__input">
+    <div class="discussion__input-attach">
+        <i class="material-icons">
+            attach_file
+            </i>
+    </div>
+      <input placeholder="Send message">
+  </div>
+</div>

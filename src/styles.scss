@@ -20,7 +20,11 @@ height: 100%;
 margin: 0;
 }
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif, "Roboto" !important;
+}
+
+html{
+  // font-family: sans-serif, "Roboto" !important;
 }
 // html {
 //   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
@@ -378,4 +382,48 @@ p{
 
 .mat-tooltip {
   margin-bottom:1px !important;
+}
+
+
+
+
+.dropdown-menu.show {
+  background: rgb(247, 247, 247);
+}
+
+
+.dropdown-item:hover {
+  background-color: #ededed;
+}
+
+
+i:focus{
+  outline:none;
+}
+
+
+.send-button{
+    background:#5a7ee9;
+    color:#fff;
+    padding:15px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:5px;
+    font-size:14px;
+    &:hover{
+      background:#6d91fa;
+    }
+    &:focus{
+      background:#5a7ee9;
+    }
+}
+
+.send-message{
+  &__button{
+    margin-top:30px;
+  }
+  &__icon{
+    margin-left:10px;
+  }
 }

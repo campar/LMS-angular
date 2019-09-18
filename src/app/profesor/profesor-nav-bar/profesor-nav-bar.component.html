@@ -7,7 +7,8 @@
             <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
                 <button class="btn btn-outline-success color-white" ngbDropdownToggle>Kreiraj</button>
                 <div class="dropdown-menu" ngbDropdownMenu>
-                  <button routerLink="/profesorPanel/kreirajProfesora" routerLinkActive="is-active" ngbDropdownItem> <span>Ishod Silabusa</span></button>
+                  <button routerLink="/profesorPanel/kreirajIshodSilabusa" routerLinkActive="is-active" ngbDropdownItem> <span>Ishod Silabusa</span></button>
+                  <button routerLink="/profesorPanel/kreirajObavestenje" routerLinkActive="is-active" ngbDropdownItem> <span>Obavestenje</span></button>
                   <!-- <button routerLink="/profesorPanel/kreirajStudenta" routerLinkActive="is-active" ngbDropdownItem> <span>Studenta</span></button> -->
                 </div>
               </div>
@@ -17,7 +18,7 @@
                 <button class="btn btn-outline-primary color-white" id="dropdownConfig" ngbDropdownToggle>Upravljaj</button>
                 <div ngbDropdownMenu aria-labelledby="dropdownConfig">
                     <button routerLink="/profesorPanel/upravljanjeSilabusa" routerLinkActive="is-active" ngbDropdownItem><span>Silabusom</span></button>
-                  <button routerLink="/profesorPanel/upravljanjeObavestenjem" routerLinkActive="is-active" ngbDropdownItem><span>Studentom</span></button>
+                  <button routerLink="/profesorPanel/upravljanjeObavestenjima" routerLinkActive="is-active" ngbDropdownItem><span>Obavestenjima</span></button>
                 </div>
               </div>
         </li>
@@ -35,8 +36,6 @@
             </a>
             <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
               <a routerLink="/profesorPanel/pregledStudenata" class="dropdown-item" href="#" (click)="$event.preventDefault()">Studenata</a>
-              <a class="dropdown-item" href="#" (click)="$event.preventDefault()">Another action</a>
-              <a class="dropdown-item" href="#" (click)="$event.preventDefault()">Something else here</a>
             </div>
           </li>
       </ul>
@@ -45,7 +44,7 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pretraži</button>
 
       </form>
-      <div ngbDropdown placement="bottom-right" display="dynamic"  autoClose=inside class="d-inline-block">
+      <div ngbDropdown placement="bottom-right" display="dynamic"  autoClose=outside class="d-inline-block">
           <img style="margin-left:5px; cursor:pointer;" height="33px;" width="auto" [src]="FILTER" alt=""
         matTooltip="Napredna Pretraga"
         matTooltipPosition="below"  id="dropdownForm1" ngbDropdownToggle>
