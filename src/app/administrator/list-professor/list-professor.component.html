@@ -1,0 +1,36 @@
+<div class="admin-panel">
+  <h3>Upravljaj Profesorom</h3>
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Username</th>
+          <th scope="col">JMBG</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let professor of professors">
+          <th scope="row">{{ professor.id }}</th>
+          <td>{{ professor.name }}</td>
+          <td>Otto</td>
+          <td>@{{ professor.username }}</td>
+          <td>{{ professor.jmbg }}</td>
+          <td>{{ professor.email }}</td>
+          <td>
+              <i class="material-icons edit-row-rable"
+              [routerLink]="'/admin/professor/' + professor.id"
+              matTooltip="Uredi"
+              matTooltipPosition="above">
+                  edit
+                  </i>
+            <i class="material-icons"
+            matTooltip="Obriši"
+            matTooltipPosition="above">delete_forever</i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

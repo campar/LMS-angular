@@ -50,11 +50,11 @@ import { FormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AdminNavBarComponent } from './administrator/admin-nav-bar/admin-nav-bar.component';
 import { AdminSidebarWrapperComponent } from './administrator/admin-sidebar-wrapper/admin-sidebar-wrapper.component';
-import { DeleteProfessorComponent } from './administrator/delete-professor/delete-professor.component';
+import { ListProfessorComponent } from './administrator/list-professor/list-professor.component';
 import { UpdateStudentComponent } from './administrator/update-student/update-student.component';
 import { DeleteStudentComponent } from './administrator/delete-student/delete-student.component';
 import { UpdateProfessorComponent } from './administrator/update-professor/update-professor.component';
-import { CreateStudentComponent } from './administrator/create-student/create-student.component';
+import { CreateEmployeeComponent } from './administrator/create-employee/create-employee.component';
 
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { ProfesorNavBarComponent } from './profesor/profesor-nav-bar/profesor-nav-bar.component';
@@ -89,11 +89,11 @@ import { NaprednaPretragaComponent } from './napredna-pretraga/napredna-pretraga
     CreateProfessorComponent,
     AdminNavBarComponent,
     AdminSidebarWrapperComponent,
-    DeleteProfessorComponent,
+    ListProfessorComponent,
     UpdateStudentComponent,
     DeleteStudentComponent,
     UpdateProfessorComponent,
-    CreateStudentComponent,
+    CreateEmployeeComponent,
     ProfesorNavBarComponent,
     PregledStudenataComponent,
     ProfesorSidebarWrapperComponent,
