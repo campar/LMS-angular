@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
 import { Professor } from '../_models/professor';
+import { Employee } from '../_models/employee';
 
 @Injectable({ providedIn: 'root' })
 export class UsersService {
@@ -14,7 +15,7 @@ export class UsersService {
     return this.http.get<Professor[]>(`${environment.apiUrl}/admin/user/professor`);
   }
 
-  getProfessor(id) {
+  getProfessor(id: number) {
     return this.http.get<Professor>(`${environment.apiUrl}/admin/user/professor/${id}`);
   }
 
@@ -26,7 +27,19 @@ export class UsersService {
     return this.http.put<Professor>(`${environment.apiUrl}/admin/user/professor/${id}`, { id, name, jmbg, username, biography, email, password });
   }
 
+  getEmployees() {
+    return this.http.get<Employee[]>(`${environment.apiUrl}/admin/user/employee`);
+  }
+
+  getEmployee(id: number) {
+    return this.http.get<Employee>(`${environment.apiUrl}/admin/user/employee/${id}`);
+  }
+
   createEmployee(username: string, email: string, password: string) {
-    return this.http.put<any>(`${environment.apiUrl}/admin/user/employee`, { username, email, password });
+    return this.http.put<Employee>(`${environment.apiUrl}/admin/user/employee`, { username, email, password });
+  }
+
+  updateEmployee(id: number, username: string, email: string, password: string) {
+    return this.http.put<Employee>(`${environment.apiUrl}/admin/user/employee/${id}`, { id, username, email, password });
   }
 }

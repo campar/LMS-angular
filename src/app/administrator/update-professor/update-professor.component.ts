@@ -27,7 +27,7 @@ export class UpdateProfessorComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.usersService.getProfessor(this.route.snapshot.paramMap.get('id')).pipe(first())
+    this.usersService.getProfessor(Number(this.route.snapshot.paramMap.get('id'))).pipe(first())
       .subscribe(
         data => {
           this.professor = data;

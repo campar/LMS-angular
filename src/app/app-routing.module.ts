@@ -14,10 +14,10 @@ import { Role } from './_models';
 import { CreateProfessorComponent } from './administrator/create-professor/create-professor.component';
 import { AdminSidebarWrapperComponent } from './administrator/admin-sidebar-wrapper/admin-sidebar-wrapper.component';
 import { ListProfessorComponent } from './administrator/list-professor/list-professor.component';
-import { UpdateStudentComponent } from './administrator/update-student/update-student.component';
+import { UpdateEmployeeComponent } from './administrator/update-employee/update-employee.component';
 import { UpdateProfessorComponent } from './administrator/update-professor/update-professor.component';
 import { CreateEmployeeComponent } from './administrator/create-employee/create-employee.component';
-import { DeleteStudentComponent } from './administrator/delete-student/delete-student.component';
+import { ListEmployeeComponent } from './administrator/list-employee/list-employee.component';
 import { ProfesorSidebarWrapperComponent } from './profesor/profesor-sidebar-wrapper/profesor-sidebar-wrapper.component';
 import { PregledStudenataComponent } from './profesor/pregled-studenata/pregled-studenata.component';
 import { StudentReviewDetailComponent } from './profesor/student-review-detail/student-review-detail.component';
@@ -69,8 +69,8 @@ const routes: Routes = [
       { path: 'professor/:id', component: UpdateProfessorComponent, },
 
       { path: 'employee/new', component: CreateEmployeeComponent, },
-      { path: 'employee', component: DeleteStudentComponent, },
-      { path: 'employee/:id', component: UpdateStudentComponent, },
+      { path: 'employee', component: ListEmployeeComponent, },
+      { path: 'employee/:id', component: UpdateEmployeeComponent, },
     ]
   },
   {
