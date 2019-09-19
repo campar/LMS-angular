@@ -1,0 +1,28 @@
+import { Component, OnInit } from '@angular/core';
+import { UsersService } from 'src/app/_services/users.service';
+import { first } from 'rxjs/operators';
+import { Employee } from 'src/app/_models/employee';
+
+@Component({
+  selector: 'app-list-employee',
+  templateUrl: './list-employee.component.html',
+  styleUrls: ['./list-employee.component.scss']
+})
+export class ListEmployeeComponent implements OnInit {
+
+  public employees: Employee[] = [];
+
+  constructor(private usersService: UsersService) { }
+
+  ngOnInit() {
+    this.usersService.getEmployees().pipe(first())
+      .subscribe(
+        data => {
+          this.employees = data;
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+}

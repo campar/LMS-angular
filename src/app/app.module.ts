@@ -51,8 +51,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AdminNavBarComponent } from './administrator/admin-nav-bar/admin-nav-bar.component';
 import { AdminSidebarWrapperComponent } from './administrator/admin-sidebar-wrapper/admin-sidebar-wrapper.component';
 import { ListProfessorComponent } from './administrator/list-professor/list-professor.component';
-import { UpdateStudentComponent } from './administrator/update-student/update-student.component';
-import { DeleteStudentComponent } from './administrator/delete-student/delete-student.component';
+import { UpdateEmployeeComponent } from './administrator/update-employee/update-employee.component';
+import { ListEmployeeComponent } from './administrator/list-employee/list-employee.component';
 import { UpdateProfessorComponent } from './administrator/update-professor/update-professor.component';
 import { CreateEmployeeComponent } from './administrator/create-employee/create-employee.component';
 
@@ -104,8 +104,8 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
     AdminNavBarComponent,
     AdminSidebarWrapperComponent,
     ListProfessorComponent,
-    UpdateStudentComponent,
-    DeleteStudentComponent,
+    UpdateEmployeeComponent,
+    ListEmployeeComponent,
     UpdateProfessorComponent,
     CreateEmployeeComponent,
     ProfesorNavBarComponent,
