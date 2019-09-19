@@ -6,7 +6,6 @@ import { UniversitiesComponent } from './universities/universities.component';
 import { UniversityDetailsComponent } from './university-details/university-details.component';
 import { FacultyDetailsComponent } from './faculty/faculty-details/faculty-details.component';
 import { StudyProgrammeDetailsComponent } from './faculty/study-programme-details/study-programme-details.component';
-import { UniversityOverviewComponent } from './university-overview/university-overview.component';
 import { SubjectDetailsComponent } from './subject-details/subject-details.component';
 import { SidebarWrapperComponent } from './sidebar-wrapper/sidebar-wrapper.component';
 import { LoginComponent } from './login/login.component';
@@ -14,10 +13,10 @@ import { AuthGuard } from './_helpers';
 import { Role } from './_models';
 import { CreateProfessorComponent } from './administrator/create-professor/create-professor.component';
 import { AdminSidebarWrapperComponent } from './administrator/admin-sidebar-wrapper/admin-sidebar-wrapper.component';
-import { DeleteProfessorComponent } from './administrator/delete-professor/delete-professor.component';
+import { ListProfessorComponent } from './administrator/list-professor/list-professor.component';
 import { UpdateStudentComponent } from './administrator/update-student/update-student.component';
 import { UpdateProfessorComponent } from './administrator/update-professor/update-professor.component';
-import { CreateStudentComponent } from './administrator/create-student/create-student.component';
+import { CreateEmployeeComponent } from './administrator/create-employee/create-employee.component';
 import { DeleteStudentComponent } from './administrator/delete-student/delete-student.component';
 import { ProfesorSidebarWrapperComponent } from './profesor/profesor-sidebar-wrapper/profesor-sidebar-wrapper.component';
 import { PregledStudenataComponent } from './profesor/pregled-studenata/pregled-studenata.component';
@@ -65,12 +64,13 @@ const routes: Routes = [
     path: 'admin',
     component: AdminSidebarWrapperComponent,
     children: [
-      { path: 'kreirajProfesora', component: CreateProfessorComponent, },
-      { path: 'azurirajProfesora', component: UpdateProfessorComponent, },
-      { path: 'upravljajProfesorom', component: DeleteProfessorComponent, },
-      { path: 'kreirajStudenta', component: CreateStudentComponent, },
-      { path: 'azurirajStudenta', component: UpdateStudentComponent, },
-      { path: 'upravljajStudentom', component: DeleteStudentComponent, },
+      { path: 'professor/new', component: CreateProfessorComponent, },
+      { path: 'professor', component: ListProfessorComponent, },
+      { path: 'professor/:id', component: UpdateProfessorComponent, },
+
+      { path: 'employee/new', component: CreateEmployeeComponent, },
+      { path: 'employee', component: DeleteStudentComponent, },
+      { path: 'employee/:id', component: UpdateStudentComponent, },
     ]
   },
   {

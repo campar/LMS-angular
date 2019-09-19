@@ -7,8 +7,8 @@
                   <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
                       <button class="btn btn-outline-success color-white" ngbDropdownToggle>Kreiraj</button>
                       <div class="dropdown-menu" ngbDropdownMenu>
-                        <button routerLink="/admin/kreirajProfesora" routerLinkActive="is-active" ngbDropdownItem> <span>Profesora</span></button>
-                        <button routerLink="/admin/kreirajStudenta" routerLinkActive="is-active" ngbDropdownItem> <span>Studenta</span></button>
+                        <button routerLink="/admin/professor/new" routerLinkActive="is-active" ngbDropdownItem> <span>Profesora</span></button>
+                        <button routerLink="/admin/employee/new" routerLinkActive="is-active" ngbDropdownItem> <span>Osobolje</span></button>
                       </div>
                     </div>
               </li>
@@ -16,8 +16,8 @@
                   <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
                       <button class="btn btn-outline-primary color-white" id="dropdownConfig" ngbDropdownToggle>Upravljaj</button>
                       <div ngbDropdownMenu aria-labelledby="dropdownConfig">
-                          <button routerLink="/admin/upravljajProfesorom" routerLinkActive="is-active" ngbDropdownItem><span>Profesorom</span></button>
-                        <button routerLink="/admin/upravljajStudentom" routerLinkActive="is-active" ngbDropdownItem><span>Studentom</span></button>
+                          <button routerLink="/admin/professor" routerLinkActive="is-active" ngbDropdownItem><span>Profesorom</span></button>
+                        <button routerLink="/admin/employee" routerLinkActive="is-active" ngbDropdownItem><span>Osoboljem</span></button>
                       </div>
                     </div>
               </li>

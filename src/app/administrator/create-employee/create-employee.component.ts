@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UsersService } from 'src/app/_services/users.service';
 import { first } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-create-professor',
-  templateUrl: './create-professor.component.html',
-  styleUrls: ['./create-professor.component.scss']
+  selector: 'app-create-employee',
+  templateUrl: './create-employee.component.html',
+  styleUrls: ['./create-employee.component.scss']
 })
-export class CreateProfessorComponent implements OnInit {
+export class CreateEmployeeComponent implements OnInit {
   createForm: FormGroup;
 
   constructor(
@@ -18,23 +18,17 @@ export class CreateProfessorComponent implements OnInit {
 
   ngOnInit() {
     this.createForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      jmbg: ['', Validators.required],
       username: ['', Validators.required],
-      biography: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
 
   onSubmit() {
-    this.usersService.createProfessor(
-      this.createForm.controls.name.value,
-      this.createForm.controls.jmbg.value,
+    this.usersService.createEmployee(
       this.createForm.controls.username.value,
-      this.createForm.controls.biography.value,
       this.createForm.controls.email.value,
-      this.createForm.controls.password.value,
+      this.createForm.controls.password.value
       ).pipe(first())
       .subscribe(
         data => {
