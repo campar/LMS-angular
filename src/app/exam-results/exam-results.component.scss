@@ -1,0 +1,113 @@
+.mat-accordion .mat-header-row {
+  padding-left: 1.5rem;
+  padding-right: 2rem;
+  border-bottom: none;
+}
+
+.mat-expansion-panel-header.mat-row {
+  border-bottom: none;
+}
+
+//copied from https://github.com/angular/material2/blob/master/src/lib/table/table.scss
+$mat-header-row-height: 56px;
+$mat-row-height: 48px;
+$mat-row-horizontal-padding: 24px;
+
+.mat-table {
+  display: block;
+  text-align: center;
+  color:#363636 !important;
+  font-size:20px !important;
+}
+
+.mat-panel-body{
+  text-align: left;
+}
+
+.mat-header-row {
+  min-height: $mat-header-row-height;
+}
+
+.mat-row {
+  min-height: $mat-row-height;
+  color:#333;
+  text-align: center;
+  &:hover{
+    background:#d6d6d6 !important;
+  }
+}
+.mat-panel-body{
+  &:nth-child(2n+0){
+    .mat-row{
+      background:#f5f5f5;
+    }
+  }
+}
+
+.mat-row, .mat-header-row {
+  display: flex;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  align-items: center;
+  padding: 0 $mat-row-horizontal-padding;
+  box-sizing: border-box;
+  // background: red;
+  // Workaround for https://goo.gl/pFmjJD in IE 11. Adds a pseudo
+  // element that will stretch the row the correct height. See:
+  // https://connect.microsoft.com/IE/feedback/details/802625
+  &::after {
+    display: inline-block;
+    min-height: inherit;
+    content: '';
+  }
+}
+
+.mat-cell, .mat-header-cell {
+  flex: 1;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.mat-header-cell{
+  // font-weight:900;
+  font-size:16px;
+}
+.mat-cell{
+  font-size:13px;
+  font-weight: 700;
+  color:#363636;
+}
+
+.announcement__file{
+  margin-top:15px;
+  a{
+    text-decoration: none;
+    display:inline-flex;
+    align-items: flex-end;
+    color:#e44221;
+
+    p{
+      font-size:16px;
+      font-weight: 700;
+    }
+    &:hover{
+      p{
+        text-decoration: underline;
+
+      }
+    }
+  }
+}
+
+.announcement__description{
+  margin-top:24px;
+}
+
+.mat-expansion-panel-body{
+  background: #f5f5f5 !important;
+}
+
+p{
+  margin:0;
+  margin-bottom: 0 !important;
+}
