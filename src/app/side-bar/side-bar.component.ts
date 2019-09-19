@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class SideBarComponent implements OnInit {
 
   private SIDEBARLOGO = require('../../assets/images/SINGIDUNUM_LOGO.png');
-
   private PREGLEDSTUDENATA = require('../../assets/images/students-icon.svg');
+  private PANELICON = require('../../assets/images/panel-icon.png');
+  private KALENDAR = require('../../assets/images/calendar-icon-white-8.jpg');
+  private PORUKA = require('../../assets/images/Mail-Icon-white.png');
+  private AVATAR = require('../../assets/images/placeholder-profile-avatar.png');
+
+
+
 
   constructor() { }
 

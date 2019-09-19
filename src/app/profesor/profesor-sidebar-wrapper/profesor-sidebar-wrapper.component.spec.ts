@@ -22,4 +22,8 @@ describe('ProfesorSidebarWrapperComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  goBack();{
+    this._location.back();
+  }
 });

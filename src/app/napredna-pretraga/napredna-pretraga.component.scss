@@ -1,4 +1,30 @@
-h4{
+h3{
   text-align: center;
+  font-size:23px;
+  margin-top:10px;
+}
+
+
+h4{
+  text-align: start;
   font-size:20px;
+  font-weight: 900;
+}
+
+
+
+.advanced-search__group{
+  display:flex;
+}
+
+.advanced-search__item{
+  margin-left:10px;
+  // background:blue;
+  &:nth-of-type(odd){
+    margin-left:0;
+  }
+}
+
+input{
+  width:200px;
 }

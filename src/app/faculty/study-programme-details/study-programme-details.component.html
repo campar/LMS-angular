@@ -61,13 +61,13 @@
       <tr class="faculty__thead--secondary">
         <th colspan="100%">GODINA {{yearsOfStudy.year}}</th>
       </tr>
-      <tr class="faculty__tbody" *ngFor="let subject of yearsOfStudy.subjects">
-        <td><a href="#" routerLink="/university/1/subject/{{subject.id}}">{{subject.name}}</a></td>
-        <td>{{subject.numberOfLectures}}</td>
-        <td>{{subject.numberOfExercises}}</td>
-        <td>{{subject.differentKindOfLectures}}</td>
-        <td>{{subject.otherClasses}}</td>
-        <td>{{subject.espb}}</td>
+      <tr class="faculty__tbody" *ngFor="let subject of yearsOfStudy.yearOfStudySubject">
+        <td><a href="#" routerLink="/university/1/subject/{{subject.subject.id}}">{{subject.subject.name}}</a></td>
+        <td>{{subject.subject.numberOfLectures}}</td>
+        <td>{{subject.subject.numberOfExercises}}</td>
+        <td>{{subject.subject.differentKindOfLectures}}</td>
+        <td>{{subject.subject.otherClasses}}</td>
+        <td>{{subject.subject.espb}}</td>
         <!-- <td>7</td> -->
       </tr>
         </tbody>

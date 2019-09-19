@@ -20,6 +20,13 @@ import { CreateEmployeeComponent } from './administrator/create-employee/create-
 import { DeleteStudentComponent } from './administrator/delete-student/delete-student.component';
 import { ProfesorSidebarWrapperComponent } from './profesor/profesor-sidebar-wrapper/profesor-sidebar-wrapper.component';
 import { PregledStudenataComponent } from './profesor/pregled-studenata/pregled-studenata.component';
+import { StudentReviewDetailComponent } from './profesor/student-review-detail/student-review-detail.component';
+import { CreateSyllabusOutcomeComponent } from './profesor/create-syllabus-outcome/create-syllabus-outcome.component';
+import { ManageNotificationsComponent } from './profesor/manage-notifications/manage-notifications.component';
+import { ManageSyllabusComponent } from './profesor/manage-syllabus/manage-syllabus.component';
+import { DiscussionComponent } from './discussion/discussion.component';
+import { DiscussionSidebarWrapperComponent } from './discussion-sidebar-wrapper/discussion-sidebar-wrapper.component';
+import { CreateNotificationComponent } from './profesor/create-notification/create-notification.component';
 
 const routes: Routes = [
   {
@@ -47,6 +54,13 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'diskusija',
+    component: DiscussionSidebarWrapperComponent,
+    children: [
+      { path: 'nekaDiskusija', component: DiscussionComponent},
+    ]
+  },
+  {
     path: 'admin',
     component: AdminSidebarWrapperComponent,
     children: [
@@ -63,9 +77,12 @@ const routes: Routes = [
     path: 'profesorPanel',
     component: ProfesorSidebarWrapperComponent,
     children: [
-      { path: 'upravljanjeSilabusa', component: CreateProfessorComponent, },
-      { path: 'upravljanjeObavestenjima', component: UpdateProfessorComponent, },
+      { path: 'upravljanjeSilabusa', component: ManageSyllabusComponent, },
+      { path: 'upravljanjeObavestenjima', component: ManageNotificationsComponent, },
       { path: 'pregledStudenata', component: PregledStudenataComponent, },
+      { path: 'pregledStudenata/:id', component: StudentReviewDetailComponent, },
+      { path: 'kreirajIshodSilabusa', component: CreateSyllabusOutcomeComponent, },
+      { path: 'kreirajObavestenje', component: CreateNotificationComponent, },
     ]
   },
   {
