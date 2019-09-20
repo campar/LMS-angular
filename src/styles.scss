@@ -432,3 +432,16 @@ i:focus{
     margin-left:10px;
   }
 }
+
+
+.is-invalid{
+  .angular-editor-textarea{
+
+    border: 1px solid #dc3545 !important;
+    border-radius:5px;
+  }
+}
+
+.angular-editor-textarea{
+  border-radius:5px !important;
+}

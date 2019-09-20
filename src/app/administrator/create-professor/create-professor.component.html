@@ -1,31 +1,32 @@
 <div class="admin-panel">
   <h3>Kreiraj Profesora</h3>
-  <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()" >
     <div class="form-group">
       <label for="name">Ime</label>
-      <input type="text" class="form-control" id="name" placeholder="Ime" formControlName="name">
+      <input type="text" class="form-control" [class.is-invalid]="createForm.controls.name.errors && createForm.controls.name.touched" id="name" placeholder="Ime" formControlName="name">
     </div>
     <div class="form-group">
       <label for="jmbg">JMBG</label>
-      <input type="text" class="form-control" id="jmbg" placeholder="Jmbg" formControlName="jmbg">
+      <input type="text" class="form-control" [class.is-invalid]="createForm.controls.jmbg.errors && createForm.controls.jmbg.touched" id="jmbg" placeholder="Jmbg" formControlName="jmbg">
     </div>
     <div class="form-group">
       <label for="username">Korisnicko ime</label>
-      <input type="text" class="form-control" id="username" placeholder="Korisnicko ime" formControlName="username">
+      <input type="text" class="form-control" required [class.is-invalid]="createForm.controls.username.errors && createForm.controls.username.touched" id="username" placeholder="Korisnicko ime" formControlName="username">
     </div>
     <div class="form-group">
       <label for="biography">Biografija</label>
-      <input type="text" class="form-control" id="biography" placeholder="Biografija" formControlName="biography">
+      <input type="text" class="form-control" [class.is-invalid]="createForm.controls.biography.errors && createForm.controls.biography.touched" id="biography" placeholder="Biografija" formControlName="biography">
     </div>
     <div class="form-group">
       <label for="email">Email adresa</label>
-      <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email">
+      <input type="email" class="form-control" [class.is-invalid]="createForm.controls.email.errors && createForm.controls.email.touched" id="email" placeholder="Email" formControlName="email">
       <small id="emailHelp" class="form-text text-muted">Nikada nećemo deliti vaš email sa trećim licima</small>
     </div>
     <div class="form-group">
       <label for="password">Lozinka</label>
-      <input type="password" class="form-control" id="password" placeholder="Lozinka" formControlName="password">
+      <input type="password" class="form-control" [class.is-invalid]="createForm.controls.password.errors && createForm.controls.password.touched" id="password" placeholder="Lozinka" formControlName="password">
     </div>
     <button type="submit" class="btn btn-primary">Kreiraj</button>
   </form>
+
 </div>

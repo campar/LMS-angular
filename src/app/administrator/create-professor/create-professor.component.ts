@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { UsersService } from 'src/app/_services/users.service';
 import { first } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-professor',
@@ -13,10 +14,13 @@ export class CreateProfessorComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private usersService: UsersService
+    private usersService: UsersService,
+    private router: Router
   ) { }
 
   ngOnInit() {
+    // this.createForm.markAllAsTouched();
+
     this.createForm = this.formBuilder.group({
       name: ['', Validators.required],
       jmbg: ['', Validators.required],
@@ -28,6 +32,14 @@ export class CreateProfessorComponent implements OnInit {
   }
 
   onSubmit() {
+
+
+    if (this.createForm.invalid) {
+      this.createForm.markAllAsTouched();
+      return;
+    }
+    this.router.navigate(['/admin/professor']);
+
     this.usersService.createProfessor(
       this.createForm.controls.name.value,
       this.createForm.controls.jmbg.value,
