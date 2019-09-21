@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { University } from '../_models/university';
+import { University } from '../_models';
 import { UniversitiesService } from '../_services/univerisities.service';
 
 @Component({

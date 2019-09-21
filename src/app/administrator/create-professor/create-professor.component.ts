@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { UsersService } from 'src/app/_services/users.service';
 import { Router } from '@angular/router';
+import { Professor } from 'src/app/_models';
 
 @Component({
   selector: 'app-create-professor',
@@ -47,7 +48,7 @@ export class CreateProfessorComponent implements OnInit {
       this.createForm.controls.email.value,
       this.createForm.controls.password.value,
     ).subscribe(
-      data => {
+      (data: Professor) => {
         console.log(data);
       },
       error => {

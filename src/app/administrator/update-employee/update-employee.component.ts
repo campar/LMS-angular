@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Employee } from 'src/app/_models/employee';
+import { Employee } from 'src/app/_models';
 import { ActivatedRoute } from '@angular/router';
 import { UsersService } from 'src/app/_services/users.service';
 
@@ -43,7 +43,7 @@ export class UpdateEmployeeComponent implements OnInit {
       this.updateForm.controls.email.value,
       this.updateForm.controls.password.value,
     ).subscribe(
-      data => {
+      (data: Employee) => {
         console.log(data);
       },
       error => {

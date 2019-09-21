@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/_services/users.service';
-import { Professor } from 'src/app/_models/professor';
+import { Professor } from 'src/app/_models';
 
 @Component({
   selector: 'app-list-professor',

@@ -3,8 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
-import { Professor } from '../_models/professor';
-import { Employee } from '../_models/employee';
+import { Professor, Employee } from '../_models';
 
 @Injectable({ providedIn: 'root' })
 export class UsersService {
