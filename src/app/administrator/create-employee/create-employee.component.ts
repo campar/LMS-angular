@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UsersService } from 'src/app/_services/users.service';
 import { Employee } from 'src/app/_models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-employee',
@@ -12,6 +13,7 @@ export class CreateEmployeeComponent implements OnInit {
   createForm: FormGroup;
 
   constructor(
+    private router: Router,
     private formBuilder: FormBuilder,
     private usersService: UsersService
   ) { }
@@ -31,7 +33,7 @@ export class CreateEmployeeComponent implements OnInit {
       this.createForm.controls.password.value
     ).subscribe(
       (data: Employee) => {
-        console.log(data);
+        this.router.navigate(['/admin/employee']);
       },
       error => {
         console.log(error);

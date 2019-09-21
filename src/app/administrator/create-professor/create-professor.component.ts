@@ -13,9 +13,9 @@ export class CreateProfessorComponent implements OnInit {
   createForm: FormGroup;
 
   constructor(
+    private router: Router,
     private formBuilder: FormBuilder,
-    private usersService: UsersService,
-    private router: Router
+    private usersService: UsersService
   ) { }
 
   ngOnInit() {
@@ -38,7 +38,6 @@ export class CreateProfessorComponent implements OnInit {
       this.createForm.markAllAsTouched();
       return;
     }
-    this.router.navigate(['/admin/professor']);
 
     this.usersService.createProfessor(
       this.createForm.controls.name.value,
@@ -49,7 +48,7 @@ export class CreateProfessorComponent implements OnInit {
       this.createForm.controls.password.value,
     ).subscribe(
       (data: Professor) => {
-        console.log(data);
+        this.router.navigate(['/admin/professor']);
       },
       error => {
         console.log(error);
