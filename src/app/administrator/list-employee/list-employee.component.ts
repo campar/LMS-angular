@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/_services/users.service';
-import { first } from 'rxjs/operators';
 import { Employee } from 'src/app/_models/employee';
 
 @Component({
@@ -15,7 +14,7 @@ export class ListEmployeeComponent implements OnInit {
   constructor(private usersService: UsersService) { }
 
   ngOnInit() {
-    this.usersService.getEmployees().pipe(first())
+    this.usersService.getEmployees()
       .subscribe(
         data => {
           this.employees = data;
@@ -24,5 +23,4 @@ export class ListEmployeeComponent implements OnInit {
           console.log(error);
         });
   }
-
 }

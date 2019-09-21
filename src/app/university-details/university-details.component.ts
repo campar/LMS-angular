@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { DataService } from '../data.service';
 import { ActivatedRoute } from '@angular/router';
+import { University } from '../_models/university';
+import { UniversitiesService } from '../_services/univerisities.service';
 
 @Component({
   selector: 'app-university-details',
@@ -9,22 +10,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UniversityDetailsComponent implements OnInit {
 
-  @ViewChild('chatBox', {static: false}) chatBox: ElementRef;
-  @ViewChild('universityMain', {static: false}) universityMain: ElementRef;
+  @ViewChild('chatBox', { static: false }) chatBox: ElementRef;
+  @ViewChild('universityMain', { static: false }) universityMain: ElementRef;
+  @ViewChild('chatSideBar', { static: false }) chatSideBar: ElementRef;
 
-  @ViewChild('chatSideBar', {static: false}) chatSideBar: ElementRef;
-  // treba RxJS ja mislim
-  faculties$: object;
+  public university: University;
 
-  constructor(private data: DataService, private route: ActivatedRoute) { }
+  constructor(private universitiesService: UniversitiesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    // // console.log('ruta',this.route.snapshot.paramMap.get('id'));
-    const id = this.route.snapshot.paramMap.get('id');
+    const id = Number(this.route.snapshot.paramMap.get('id'));
 
-    this.data.getFacultiesByUniversityId(id).subscribe(
-        data => this.faculties$ = data
-      );
+    this.universitiesService.getUniversity(id).subscribe(
+      data => {
+        this.university = data
+      });
   }
 
   open() {

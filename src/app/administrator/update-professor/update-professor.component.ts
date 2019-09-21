@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { first } from 'rxjs/operators';
 import { UsersService } from 'src/app/_services/users.service';
 import { Professor } from 'src/app/_models/professor';
 import { ActivatedRoute } from '@angular/router';
@@ -27,7 +26,7 @@ export class UpdateProfessorComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.usersService.getProfessor(Number(this.route.snapshot.paramMap.get('id'))).pipe(first())
+    this.usersService.getProfessor(Number(this.route.snapshot.paramMap.get('id')))
       .subscribe(
         data => {
           this.professor = data;
@@ -52,14 +51,13 @@ export class UpdateProfessorComponent implements OnInit {
       this.updateForm.controls.biography.value,
       this.updateForm.controls.email.value,
       this.updateForm.controls.password.value,
-      ).pipe(first())
-      .subscribe(
-        data => {
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
+    ).subscribe(
+      data => {
+        console.log(data);
+      },
+      error => {
+        console.log(error);
+      });
   }
 
 }

@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Professor } from 'src/app/_models/professor';
 import { Employee } from 'src/app/_models/employee';
 import { ActivatedRoute } from '@angular/router';
 import { UsersService } from 'src/app/_services/users.service';
-import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-update-employee',
@@ -25,7 +23,7 @@ export class UpdateEmployeeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.usersService.getEmployee(Number(this.route.snapshot.paramMap.get('id'))).pipe(first())
+    this.usersService.getEmployee(Number(this.route.snapshot.paramMap.get('id')))
       .subscribe(
         data => {
           this.employee = data;
@@ -44,14 +42,13 @@ export class UpdateEmployeeComponent implements OnInit {
       this.updateForm.controls.username.value,
       this.updateForm.controls.email.value,
       this.updateForm.controls.password.value,
-      ).pipe(first())
-      .subscribe(
-        data => {
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
+    ).subscribe(
+      data => {
+        console.log(data);
+      },
+      error => {
+        console.log(error);
+      });
   }
 
 }

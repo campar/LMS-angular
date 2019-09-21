@@ -1,5 +1,12 @@
+<app-responsible-person
+  type="Rektor"
+  [person]="university?.rector"
+  [phoneNumber]="university?.phoneNumber"
+></app-responsible-person>
 
-<app-responsible-rector></app-responsible-rector>
 <div class="faculties">
-  <app-faculties-card *ngFor="let faculty of faculties$" [faculty]="faculty"></app-faculties-card>
+  <app-faculties-card
+    *ngFor="let faculty of university?.faculties"
+    [faculty]="faculty"
+  ></app-faculties-card>
 </div>
