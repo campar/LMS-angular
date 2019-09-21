@@ -1,36 +1,36 @@
 <div class="faculties-card">
-    <div class="faculties-card__background">
-      <div class="faculties-card__settings">
-        <i class="material-icons">
-          settings_applications
-          </i>
-        </div>
-      <h3 class="faculties-card__header" routerLink="/university/1/faculty/{{faculty.id}}">
-        <small>{{faculty.name}}</small>
-        <small class="faculties-card__sub-header">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum cupiditate maxime aperiam perferendis itaque? Possimus nemo laboriosam fugiat dolore vel blanditiis aspernatur molestiae ducimus eveniet. Tempora recusandae dicta doloremque consequuntur.
-        </small>
-      </h3>
-
+  <div class="faculties-card__background">
+    <div class="faculties-card__settings">
+      <!-- <i class="material-icons">
+        settings_applications
+      </i> -->
     </div>
-    <ul class="faculties-card__group-icons">
-      <!-- <li>
-        <i class="material-icons">
-          folder
-        </i>
-      </li> -->
-      <li>
-        <img [src]="ANNOUNCEMENT" alt="">
-      </li>
-      <li>
-        <i class="material-icons">
-          chat
-        </i>
-      </li>
-      <li>
-        <i class="material-icons">
-            info
-        </i>
-      </li>
-    </ul>
+    <h3 class="faculties-card__header" routerLink="/university/1/faculty/{{faculty.id}}">
+      <small>{{faculty.name}}</small>
+      <small class="faculties-card__sub-header">
+        {{ faculty.description }}
+      </small>
+    </h3>
+
   </div>
+  <ul class="faculties-card__group-icons d-none">
+    <li>
+      <i class="material-icons">
+        folder
+      </i>
+    </li>
+    <li>
+      <img [src]="ANNOUNCEMENT" alt="">
+    </li>
+    <li>
+      <i class="material-icons">
+        chat
+      </i>
+    </li>
+    <li routerLink="/university/1/faculty/{{faculty.id}}">
+      <i class="material-icons">
+        info
+      </i>
+    </li>
+  </ul>
+</div>
