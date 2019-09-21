@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/data.service';
 import { ActivatedRoute } from '@angular/router';
+import { StudyProgramme } from 'src/app/_models';
+import { StudyProgrammeService } from 'src/app/_services/study-programme.service';
 
 @Component({
   selector: 'app-study-programme-details',
@@ -9,16 +10,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class StudyProgrammeDetailsComponent implements OnInit {
 
-  studyProgramme$: object;
-  constructor(private data: DataService, private route: ActivatedRoute) { }
+  public studyProgramme: StudyProgramme;
+
+  constructor(private studyProgrammeService: StudyProgrammeService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.studyProgramme$ = {};
-    const id = this.route.snapshot.paramMap.get('id');
+    const id = Number(this.route.snapshot.paramMap.get('id'));
 
-    this.data.getStudyPrograme(id).subscribe(
-        data => this.studyProgramme$ = data
-      );
+    this.studyProgrammeService.getStudyProgramme(id).subscribe(
+      (data: StudyProgramme) => {
+        this.studyProgramme = data
+        console.log(this.studyProgramme)
+      });
   }
-
 }

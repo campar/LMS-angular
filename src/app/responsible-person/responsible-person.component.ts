@@ -11,6 +11,7 @@ export class ResponsiblePersonComponent implements OnInit {
   @Input() type: string;
   @Input() phoneNumber: string;
   @Input() person: User;
+  @Input() hidePhoneNumber: boolean = false;
 
   constructor() { }
 

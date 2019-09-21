@@ -15,7 +15,7 @@
       {{ person?.name }}
     </div>
     <div class="university-rector__contact">
-      <div class="university-rector__phone">
+      <div *ngIf="hidePhoneNumber" class="university-rector__phone">
         <i class="material-icons">phone</i>
         <p>{{ phoneNumber }}</p>
       </div>

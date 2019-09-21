@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/_services/users.service';
-import { Professor } from 'src/app/_models/professor';
+import { Professor } from 'src/app/_models';
 import { ActivatedRoute } from '@angular/router';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
@@ -52,7 +52,7 @@ export class UpdateProfessorComponent implements OnInit {
       this.updateForm.controls.email.value,
       this.updateForm.controls.password.value,
     ).subscribe(
-      data => {
+      (data: Professor) => {
         console.log(data);
       },
       error => {

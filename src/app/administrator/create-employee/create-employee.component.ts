@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UsersService } from 'src/app/_services/users.service';
+import { Employee } from 'src/app/_models';
 
 @Component({
   selector: 'app-create-employee',
@@ -29,7 +30,7 @@ export class CreateEmployeeComponent implements OnInit {
       this.createForm.controls.email.value,
       this.createForm.controls.password.value
     ).subscribe(
-      data => {
+      (data: Employee) => {
         console.log(data);
       },
       error => {

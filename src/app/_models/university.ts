@@ -1,8 +1,9 @@
 import { Faculty } from './faculty';
 import { Address } from './address';
 import { Professor } from './professor';
+import { BaseModel } from './base-model';
 
-export class University {
+export class University extends BaseModel {
   id: number;
   name: string;
   dateOfEstablishment: Date;
