@@ -1,76 +1,67 @@
-.university-rector{
-  margin-top:20px;
-  padding:10px;
-  padding-top:3px;
-  border-radius:10px;
-  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.45);
+.university-rector {
+  margin-top: 20px;
+  padding: 10px;
+  padding-top: 3px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.45);
   margin-bottom: 60px;
-  &__flex{
-    display:flex;
+  &__flex {
+    display: flex;
     justify-content: space-around;
     align-items: center;
     // padding-left:100px;
     // padding-right:100px;
   }
-  &__name{
-    color:#209ee4;
-    &:hover{
+  &__name {
+    color: #209ee4;
+    &:hover {
       text-decoration: underline;
       cursor: pointer;
     }
   }
-  &__phone{
+  &__phone {
     display: flex;
     align-items: center;
     cursor: pointer;
-    &:hover{
-      & > p{
-       text-decoration: underline;
+    &:hover {
+      & > p {
+        text-decoration: underline;
       }
     }
-    i{
-      color:#333333;
-      margin-right:5px;
+    i {
+      color: #333333;
+      margin-right: 5px;
     }
   }
-  &__email{
+  &__email {
     display: flex;
     align-items: center;
-    margin-top:10px;
-    cursor: pointer;
-    &:hover{
-      & > p{
-       text-decoration: underline;
-      }
-    }
-    i{
-      margin-right:5px;
-      color:#333333;
+    margin-top: 10px;
+    i {
+      margin-right: 5px;
+      color: #333333;
     }
   }
-  hr{
-    margin-top:10px;
+  hr {
+    margin-top: 10px;
     margin-bottom: 10px;
-    width:85%;
+    width: 85%;
     position: relative;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
   }
-  h3{
-    display:flex;
+  h3 {
+    display: flex;
     align-items: center;
     justify-content: center;
   }
 
-
-
-
-  &__profile-image{
+  &__profile-image {
     display: inline-flex;
     align-items: center;
-    img{
-      margin-right:5px;
-      border-radius:50%;
+    img {
+      margin-right: 5px;
+      border-radius: 50%;
     }
   }
 }

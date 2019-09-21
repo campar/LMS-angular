@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 import { ActivatedRoute } from '@angular/router';
+import { Faculty } from 'src/app/_models';
+import { FacultiesService } from 'src/app/_services/faculties.service';
 
 @Component({
   selector: 'app-faculty-details',
@@ -9,16 +11,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FacultyDetailsComponent implements OnInit {
 
-  faculty$: object;
-  constructor(private data: DataService, private route: ActivatedRoute) { }
+  public faculty: Faculty;
+  constructor(private facultiesService: FacultiesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.faculty$ = {};
-    const id = this.route.snapshot.paramMap.get('id');
+    const id = Number(this.route.snapshot.paramMap.get('id'));
 
-    this.data.getFacultyDetails(id).subscribe(
-        data => this.faculty$ = data
-      );
+    this.facultiesService.getFaculty(id).subscribe(
+      (data: Faculty) => {
+        this.faculty = data
+      });
   }
-
 }

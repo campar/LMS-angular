@@ -1,6 +1,16 @@
-<ul>
+<app-responsible-person
+  type="Dekan"
+  [person]="faculty?.dean"
+  [phoneNumber]="faculty?.phoneNumber"
+>
+</app-responsible-person>
 
-  <li *ngFor="let studyProgramme of faculty$.studyProgrammes">
-    <a href="" routerLink="/university/1/studyProgramme/{{studyProgramme.id}}">{{studyProgramme.name}}</a>
+<ul>
+  <li *ngFor="let studyProgramme of faculty?.studyProgrammes">
+    <a
+      href=""
+      routerLink="/university/1/studyProgramme/{{ studyProgramme.id }}"
+      >{{ studyProgramme.name }}</a
+    >
   </li>
 </ul>
