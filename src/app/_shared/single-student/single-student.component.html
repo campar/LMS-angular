@@ -7,9 +7,7 @@
       alt="">
     <button routerLink="/diskusija/nekaDiskusija" class="send-message__button send-button">
       Posaljite poruku
-      <i class="material-icons send-message__icon">
-        send
-      </i>
+      <i class="material-icons send-message__icon">send</i>
     </button>
 
   </div>
@@ -20,11 +18,11 @@
       <tbody>
         <tr>
           <th scope="col">Ime</th>
-          <td>David</td>
+          <td>{{ student.name }}</td>
         </tr>
         <tr>
           <th scope="col">Prezime</th>
-          <td>Campar</td>
+          <td>{{ student.lastName }}</td>
         </tr>
         <tr>
           <th scope="col">BrojIndeksa</th>
@@ -32,15 +30,15 @@
         </tr>
         <tr>
           <th scope="col">Korisnicko Ime</th>
-          <td>username</td>
+          <td>{{ student.username }}</td>
         </tr>
         <tr>
           <th scope="col">Email</th>
-          <td>email@gmail.com</td>
+          <td>{{ student.email }}</td>
         </tr>
         <tr>
           <th scope="col">JMBG</th>
-          <td>99999999999999</td>
+          <td>{{ student.jmbg }}</td>
         </tr>
       </tbody>
     </table>

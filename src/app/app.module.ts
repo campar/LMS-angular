@@ -61,20 +61,14 @@ import { ProfesorNavBarComponent } from './profesor/profesor-nav-bar/profesor-na
 import { PregledStudenataComponent } from './profesor/pregled-studenata/pregled-studenata.component';
 import { ProfesorSidebarWrapperComponent } from './profesor/profesor-sidebar-wrapper/profesor-sidebar-wrapper.component';
 import { NaprednaPretragaComponent } from './napredna-pretraga/napredna-pretraga.component';
-import { StudentReviewDetailComponent } from './profesor/student-review-detail/student-review-detail.component';
-import { CreateSyllabusOutcomeComponent } from './profesor/create-syllabus-outcome/create-syllabus-outcome.component';
-import { ManageNotificationsComponent } from './profesor/manage-notifications/manage-notifications.component';
-import { ManageSyllabusComponent } from './profesor/manage-syllabus/manage-syllabus.component';
 import { DiscussionComponent } from './discussion/discussion.component';
 import { DiscussionSidebarWrapperComponent } from './discussion-sidebar-wrapper/discussion-sidebar-wrapper.component';
 import { CreateNotificationComponent } from './profesor/create-notification/create-notification.component';
-
-
-
 // import { HttpClientModule} from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
-
 import { ScrollToModule } from 'ng2-scroll-to-el';
+import { SingleStudentComponent } from './_shared/single-student/single-student.component';
+import { ChooseFacultyComponent } from './_shared/choose-faculty/choose-faculty.component';
 
 
 @NgModule({
@@ -112,13 +106,11 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
     PregledStudenataComponent,
     ProfesorSidebarWrapperComponent,
     NaprednaPretragaComponent,
-    StudentReviewDetailComponent,
-    CreateSyllabusOutcomeComponent,
-    ManageNotificationsComponent,
-    ManageSyllabusComponent,
     DiscussionComponent,
     DiscussionSidebarWrapperComponent,
     CreateNotificationComponent,
+    SingleStudentComponent,
+    ChooseFacultyComponent,
   ],
   imports: [
     BrowserModule,
