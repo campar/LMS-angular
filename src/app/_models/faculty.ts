@@ -4,7 +4,7 @@ import { StudyProgramme } from './study-programme';
 
 export class Faculty {
   id: number;
-	name: string;
+  name: string;
   phoneNumber: string;
   description: string;
   university: University;
