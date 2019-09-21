@@ -1,0 +1,28 @@
+<div class="university-rector">
+  <h3><i class="material-icons">person</i> Lice odgovorno za univerzitet</h3>
+  <hr style=" border:1px solid #ececec;" />
+  <div class="university-rector__flex">
+    <div class="university-rector__profile-image">
+      <img
+        height="60px"
+        width="60px;"
+        [src]="'/assets/images/5899ffcf6e09a897008b5c04-750-750.jpg'"
+        alt=""
+      />
+      {{ type }}
+    </div>
+    <div class="university-rector__name">
+      {{ person?.name }}
+    </div>
+    <div class="university-rector__contact">
+      <div class="university-rector__phone">
+        <i class="material-icons">phone</i>
+        <p>{{ phoneNumber }}</p>
+      </div>
+      <div class="university-rector__email">
+        <i class="material-icons">email</i>
+        <p>{{ person?.email }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,14 +14,14 @@ import { FooterComponent } from './footer/footer.component';
 import { UniversityDetailsComponent } from './university-details/university-details.component';
 import { ChatSideBarComponent } from './chat-side-bar/chat-side-bar.component';
 import { FacultiesCardComponent } from './faculties-card/faculties-card.component';
-import { ResponsibleRectorComponent } from './responsible-rector/responsible-rector.component';
+import { ResponsiblePersonComponent } from './responsible-person/responsible-person.component';
 import { FacultyDetailsComponent } from './faculty/faculty-details/faculty-details.component';
 import { StudyProgrammeDetailsComponent } from './faculty/study-programme-details/study-programme-details.component';
 import { UniversityOverviewComponent } from './university-overview/university-overview.component';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 
@@ -29,7 +29,7 @@ import { SubjectDetailsComponent } from './subject-details/subject-details.compo
 import { SilabusComponent } from './silabus/silabus.component';
 import { AnnouncementComponent } from './announcement/announcement.component';
 
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { ExamResultsComponent } from './exam-results/exam-results.component';
 import { TeachingMaterialComponent } from './teaching-material/teaching-material.component';
 
@@ -45,9 +45,9 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreateProfessorComponent } from './administrator/create-professor/create-professor.component';
 
-import { FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AdminNavBarComponent } from './administrator/admin-nav-bar/admin-nav-bar.component';
 import { AdminSidebarWrapperComponent } from './administrator/admin-sidebar-wrapper/admin-sidebar-wrapper.component';
 import { ListProfessorComponent } from './administrator/list-professor/list-professor.component';
@@ -56,7 +56,7 @@ import { ListEmployeeComponent } from './administrator/list-employee/list-employ
 import { UpdateProfessorComponent } from './administrator/update-professor/update-professor.component';
 import { CreateEmployeeComponent } from './administrator/create-employee/create-employee.component';
 
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { ProfesorNavBarComponent } from './profesor/profesor-nav-bar/profesor-nav-bar.component';
 import { PregledStudenataComponent } from './profesor/pregled-studenata/pregled-studenata.component';
 import { ProfesorSidebarWrapperComponent } from './profesor/profesor-sidebar-wrapper/profesor-sidebar-wrapper.component';
@@ -89,7 +89,7 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
     UniversityDetailsComponent,
     ChatSideBarComponent,
     FacultiesCardComponent,
-    ResponsibleRectorComponent,
+    ResponsiblePersonComponent,
     FacultyDetailsComponent,
     UniversityOverviewComponent,
     SubjectDetailsComponent,

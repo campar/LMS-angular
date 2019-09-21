@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { UsersService } from 'src/app/_services/users.service';
-import { first } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
 @Component({
@@ -47,13 +46,12 @@ export class CreateProfessorComponent implements OnInit {
       this.createForm.controls.biography.value,
       this.createForm.controls.email.value,
       this.createForm.controls.password.value,
-      ).pipe(first())
-      .subscribe(
-        data => {
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
+    ).subscribe(
+      data => {
+        console.log(data);
+      },
+      error => {
+        console.log(error);
+      });
   }
 }

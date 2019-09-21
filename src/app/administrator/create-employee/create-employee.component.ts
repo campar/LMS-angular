@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UsersService } from 'src/app/_services/users.service';
-import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-create-employee',
@@ -29,13 +28,12 @@ export class CreateEmployeeComponent implements OnInit {
       this.createForm.controls.username.value,
       this.createForm.controls.email.value,
       this.createForm.controls.password.value
-      ).pipe(first())
-      .subscribe(
-        data => {
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
+    ).subscribe(
+      data => {
+        console.log(data);
+      },
+      error => {
+        console.log(error);
+      });
   }
 }

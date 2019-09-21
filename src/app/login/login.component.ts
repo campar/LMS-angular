@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthenticationService } from '../_services';
-import { first } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
 @Component({
@@ -40,22 +39,21 @@ export class LoginComponent implements OnInit {
     }
 
     this.authenticationService.login(this.loginForm.controls.username.value, this.loginForm.controls.password.value)
-    .pipe(first())
-    .subscribe(
-      data => {
-        this.router.navigate(['/']);
-      },
-      error => {
-        this.error = error;
-      });
-    }
+      .subscribe(
+        () => {
+          this.router.navigate(['/']);
+        },
+        error => {
+          this.error = error;
+        });
+  }
 
-    toggleShow() {
-        this.show = !this.show;
-        if (this.show) {
-            this.type = 'text';
-        } else {
-            this.type = 'password';
-        }
+  toggleShow() {
+    this.show = !this.show;
+    if (this.show) {
+      this.type = 'text';
+    } else {
+      this.type = 'password';
     }
   }
+}
