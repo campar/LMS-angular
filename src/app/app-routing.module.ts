@@ -50,6 +50,27 @@ const routes: Routes = [
       { path: 'studyProgramme/:id', component: StudyProgrammeDetailsComponent, },
       { path: 'subject/:id', component: SubjectDetailsComponent },
       { path: 'faculty/:id', component: FacultyDetailsComponent },
+      {
+        path: 'profesorPanel',
+        component: null,
+        children: [
+          { path: 'university/:id', component: ChooseFacultyComponent },
+          { path: 'faculty/:id', component: ChooseProgrammeComponent },
+          {
+            path: ':programId',
+            component: null,
+            children: [
+              { path: '', component: PregledStudenataComponent },
+              // { path: 'upravljanjeSilabusa', component: ManageSyllabusComponent, },
+              // { path: 'upravljanjeObavestenjima', component: ManageNotificationsComponent, },
+              { path: 'students', component: PregledStudenataComponent, },
+              { path: 'students/:id', component: SingleStudentComponent },
+              // { path: 'kreirajIshodSilabusa', component: CreateSyllabusOutcomeComponent, },
+              { path: 'notifications/create', component: CreateNotificationComponent, },
+            ]
+          },
+        ]
+      }
     ]
   },
   {
@@ -70,27 +91,6 @@ const routes: Routes = [
       { path: 'employee/new', component: CreateEmployeeComponent, },
       { path: 'employee', component: ListEmployeeComponent, },
       { path: 'employee/:id', component: UpdateEmployeeComponent, },
-    ]
-  },
-  {
-    path: 'profesorPanel',
-    component: ProfesorSidebarWrapperComponent,
-    children: [
-      { path: 'university/:id', component: ChooseFacultyComponent },
-      { path: 'faculty/:id', component: ChooseProgrammeComponent },
-      {
-        path: ':programId/',
-        component: ProfesorSidebarWrapperComponent,
-        children: [
-          { path: '', component: PregledStudenataComponent },
-          // { path: 'upravljanjeSilabusa', component: ManageSyllabusComponent, },
-          // { path: 'upravljanjeObavestenjima', component: ManageNotificationsComponent, },
-          { path: 'students', component: PregledStudenataComponent, },
-          { path: 'students/:id', component: SingleStudentComponent },
-          // { path: 'kreirajIshodSilabusa', component: CreateSyllabusOutcomeComponent, },
-          { path: 'notifications/create', component: CreateNotificationComponent, },
-        ]
-      },
     ]
   },
   {

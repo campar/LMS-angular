@@ -1,1 +1,10 @@
-<p>choose-programme works!</p>
+<h2>Izaberite smer:</h2>
+
+<div class="faculties">
+  <app-faculties-card *ngFor="let faculty of faculty?.studyProgrammes" [faculty]="faculty"
+    [redirectUrl]="'/profesorPanel/' + faculty.id">
+  </app-faculties-card>
+  <p *ngIf="faculty?.studyProgrammes.length === 0" class="text-danger mt-3">
+    Nema smerova na ovom fakultetu!
+  </p>
+</div>

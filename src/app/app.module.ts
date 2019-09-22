@@ -70,6 +70,8 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
 import { SingleStudentComponent } from './_shared/single-student/single-student.component';
 import { ChooseFacultyComponent } from './_shared/choose-faculty/choose-faculty.component';
 import { ChooseProgrammeComponent } from './_shared/choose-programme/choose-programme.component';
+import { LmsTableComponent } from './_shared/lms-table/lms-table.component';
+import { ThSortableDirective } from './_directives/th-sortable.directive';
 
 @NgModule({
   declarations: [
@@ -112,6 +114,8 @@ import { ChooseProgrammeComponent } from './_shared/choose-programme/choose-prog
     SingleStudentComponent,
     ChooseFacultyComponent,
     ChooseProgrammeComponent,
+    LmsTableComponent,
+    ThSortableDirective,
   ],
   imports: [
     BrowserModule,

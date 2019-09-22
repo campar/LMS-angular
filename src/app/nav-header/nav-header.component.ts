@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../_services';
+import { User } from '../_models';
 
 @Component({
   selector: 'app-nav-header',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavHeaderComponent implements OnInit {
 
-  constructor() { }
+  public authUser: User;
+
+  constructor(private authenticationService: AuthenticationService) {
+    authenticationService.currentUser.subscribe((user) => {
+      this.authUser = user;
+    })
+  }
 
   ngOnInit() {
+  }
+
+  logout() {
+    this.authenticationService.logout();
   }
 
 }

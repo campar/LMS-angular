@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfesorNavBarComponent implements OnInit {
 
-  private FILTER = require('../../../assets/images/filter-icon.png');
-
   constructor() { }
 
   ngOnInit() {

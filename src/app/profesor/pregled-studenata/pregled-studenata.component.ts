@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pregled-studenata.component.scss']
 })
 export class PregledStudenataComponent implements OnInit {
+  private FILTER = require('../../../assets/images/filter-icon.png');
 
   constructor() { }
 
