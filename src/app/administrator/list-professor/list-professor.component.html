@@ -1,4 +1,18 @@
 <div class="admin-panel">
+  <ngb-alert
+    *ngIf="successfullyCreated"
+    (close)="closeSuccessfullyCreatedAlert()"
+    type="success"
+  >
+    Profesor uspesno dodat
+  </ngb-alert>
+  <ngb-alert
+    *ngIf="successfullyUpdated"
+    (close)="closeSuccessfullyUpdatedAlert()"
+    type="success"
+  >
+    Profesor uspesno ažuriran
+  </ngb-alert>
   <h3>Upravljaj Profesorom</h3>
   <app-lms-table
     [headers]="tableHeaders"

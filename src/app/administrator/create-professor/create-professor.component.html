@@ -1,32 +1,183 @@
 <div class="admin-panel">
   <h3>Kreiraj Profesora</h3>
-  <form [formGroup]="createForm" (ngSubmit)="onSubmit()" >
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Ime</label>
-      <input type="text" class="form-control" [class.is-invalid]="createForm.controls.name.errors && createForm.controls.name.touched" id="name" placeholder="Ime" formControlName="name">
+      <input
+        type="text"
+        class="form-control"
+        [class.is-invalid]="
+          createForm.controls.name.invalid &&
+          (createForm.controls.name.dirty || createForm.controls.name.touched)
+        "
+        id="name"
+        placeholder="Ime"
+        formControlName="name"
+      />
+      <div
+        *ngIf="
+          createForm.controls.name.invalid &&
+          (createForm.controls.name.dirty || createForm.controls.name.touched)
+        "
+      >
+        <div *ngIf="createForm.controls.name.errors.required">
+          Ime je obavezno.
+        </div>
+      </div>
     </div>
     <div class="form-group">
       <label for="jmbg">JMBG</label>
-      <input type="text" class="form-control" [class.is-invalid]="createForm.controls.jmbg.errors && createForm.controls.jmbg.touched" id="jmbg" placeholder="Jmbg" formControlName="jmbg">
+      <input
+        type="text"
+        class="form-control"
+        [class.is-invalid]="
+          createForm.controls.jmbg.invalid &&
+          (createForm.controls.jmbg.dirty || createForm.controls.jmbg.touched)
+        "
+        id="jmbg"
+        placeholder="Jmbg"
+        formControlName="jmbg"
+      />
+      <div
+        *ngIf="
+          createForm.controls.jmbg.invalid &&
+          (createForm.controls.jmbg.dirty || createForm.controls.jmbg.touched)
+        "
+      >
+        <div *ngIf="createForm.controls.jmbg.errors.required">
+          JMBG je obavezan.
+        </div>
+        <div *ngIf="createForm.controls.jmbg.errors.minlength">
+          JMBG mora imati 13 karaktera.
+        </div>
+        <div *ngIf="createForm.controls.jmbg.errors.maxlength">
+          JMBG mora imati 13 karaktera.
+        </div>
+      </div>
     </div>
     <div class="form-group">
       <label for="username">Korisnicko ime</label>
-      <input type="text" class="form-control" required [class.is-invalid]="createForm.controls.username.errors && createForm.controls.username.touched" id="username" placeholder="Korisnicko ime" formControlName="username">
+      <input
+        type="text"
+        class="form-control"
+        required
+        [class.is-invalid]="
+          createForm.controls.username.errors &&
+          createForm.controls.username.touched
+        "
+        id="username"
+        placeholder="Korisnicko ime"
+        formControlName="username"
+      />
+      <div
+        *ngIf="
+          createForm.controls.username.invalid &&
+          (createForm.controls.username.dirty ||
+            createForm.controls.username.touched)
+        "
+      >
+        <div *ngIf="createForm.controls.username.errors.required">
+          Korisnicko ime je obavezno.
+        </div>
+        <div *ngIf="createForm.controls.username.errors.minlength">
+          Korisnicko ime mora imati najmanje 3 karaktera.
+        </div>
+        <div *ngIf="createForm.controls.username.errors.maxlength">
+          Korisnicko ime mora imati najvise 50 karaktera.
+        </div>
+      </div>
     </div>
     <div class="form-group">
       <label for="biography">Biografija</label>
-      <input type="text" class="form-control" [class.is-invalid]="createForm.controls.biography.errors && createForm.controls.biography.touched" id="biography" placeholder="Biografija" formControlName="biography">
+      <input
+        type="text"
+        class="form-control"
+        [class.is-invalid]="
+          createForm.controls.biography.invalid &&
+          (createForm.controls.biography.dirty ||
+            createForm.controls.biography.touched)
+        "
+        id="biography"
+        placeholder="Biografija"
+        formControlName="biography"
+      />
+      <div
+        *ngIf="
+          createForm.controls.biography.invalid &&
+          (createForm.controls.biography.dirty ||
+            createForm.controls.biography.touched)
+        "
+      >
+        <div *ngIf="createForm.controls.biography.errors.required">
+          Biografjia je obavezna.
+        </div>
+      </div>
     </div>
     <div class="form-group">
       <label for="email">Email adresa</label>
-      <input type="email" class="form-control" [class.is-invalid]="createForm.controls.email.errors && createForm.controls.email.touched" id="email" placeholder="Email" formControlName="email">
-      <small id="emailHelp" class="form-text text-muted">Nikada nećemo deliti vaš email sa trećim licima</small>
+      <input
+        type="email"
+        class="form-control"
+        [class.is-invalid]="
+          createForm.controls.email.invalid &&
+          (createForm.controls.email.dirty || createForm.controls.email.touched)
+        "
+        id="email"
+        placeholder="Email"
+        formControlName="email"
+      />
+      <small id="emailHelp" class="form-text text-muted"
+        >Nikada nećemo deliti vaš email sa trećim licima</small
+      >
+      <div
+        *ngIf="
+          createForm.controls.email.invalid &&
+          (createForm.controls.email.dirty || createForm.controls.email.touched)
+        "
+      >
+        <div *ngIf="createForm.controls.email.errors.required">
+          E-Mail je obavezan.
+        </div>
+        <div *ngIf="createForm.controls.email.errors.email">
+          E-Mail nije validan.
+        </div>
+        <div *ngIf="createForm.controls.email.errors.maxlength">
+          E-Mail ime mora imati najvise 50 karaktera.
+        </div>
+      </div>
     </div>
     <div class="form-group">
       <label for="password">Lozinka</label>
-      <input type="password" class="form-control" [class.is-invalid]="createForm.controls.password.errors && createForm.controls.password.touched" id="password" placeholder="Lozinka" formControlName="password">
+      <input
+        type="password"
+        class="form-control"
+        [class.is-invalid]="
+          createForm.controls.password.invalid &&
+          (createForm.controls.password.dirty ||
+            createForm.controls.password.touched)
+        "
+        id="password"
+        placeholder="Lozinka"
+        formControlName="password"
+      />
+      <div
+        *ngIf="
+          createForm.controls.password.invalid &&
+          (createForm.controls.password.dirty ||
+            createForm.controls.password.touched)
+        "
+      >
+        <div *ngIf="createForm.controls.password.errors.required">
+          Lozinka je obavezna.
+        </div>
+        <div *ngIf="createForm.controls.password.errors.minlength">
+          Lozinka mora imati najmanje 6 karaktera.
+        </div>
+        <div *ngIf="createForm.controls.password.errors.maxlength">
+          Lozinka ime mora imati najvise 100 karaktera.
+        </div>
+      </div>
     </div>
     <button type="submit" class="btn btn-primary">Kreiraj</button>
   </form>
-
 </div>

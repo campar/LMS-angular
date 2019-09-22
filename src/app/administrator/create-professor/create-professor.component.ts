@@ -23,17 +23,15 @@ export class CreateProfessorComponent implements OnInit {
 
     this.createForm = this.formBuilder.group({
       name: ['', Validators.required],
-      jmbg: ['', Validators.required],
-      username: ['', Validators.required],
+      jmbg: ['', [Validators.required, Validators.minLength(13), Validators.maxLength(13)]],
+      username: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
       biography: ['', Validators.required],
-      email: ['', Validators.required],
-      password: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email, Validators.maxLength(50)]],
+      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(100)]],
     });
   }
 
   onSubmit() {
-
-
     if (this.createForm.invalid) {
       this.createForm.markAllAsTouched();
       return;
@@ -48,7 +46,7 @@ export class CreateProfessorComponent implements OnInit {
       this.createForm.controls.password.value,
     ).subscribe(
       (data: Professor) => {
-        this.router.navigate(['/admin/professor']);
+        this.router.navigate(['/admin/professor'], { queryParams: { successfullyCreated: true } });
       },
       error => {
         console.log(error);
