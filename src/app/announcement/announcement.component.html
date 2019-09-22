@@ -6,21 +6,15 @@
       <span class="mat-header-cell" mat-sort-header="vesselId">Kreirao</span>
       <span class="mat-header-cell" mat-sort-header="vesselStatus">Vreme Objave</span>
     </section>
-    <mat-expansion-panel class="mat-panel-body" >
+    <mat-expansion-panel class="mat-panel-body" *ngFor="let notification of notifications">
         <mat-expansion-panel-header class="mat-row" animationDuration="10000ms">
-          <span class="mat-cell">Domaći zadaci</span>
+          <span class="mat-cell">{{notification.title}}</span>
           <span class="mat-cell">Aleksandra Mitrović </span>
-          <span class="mat-cell">Wednesday, 10 October 2018, 3:36 PM</span>
+          <span class="mat-cell">{{notification.createdDate}}</span>
         </mat-expansion-panel-header>
         <div>
           <pre class="announcement__description">
-  Poštovani studenti,
-
-  Adresa za slanje domaćih zadataka je domacispa@gmail.com
-
-  Imenujte svoje arhive sa rešenjima po šablonu
-
-  Rokovi za predaju su 7 dana od dana objave.
+          {{notification.content}}
             </pre>
           <p class="announcement__file">
             <a href="#">
@@ -29,96 +23,4 @@
           </p>
         </div>
       </mat-expansion-panel>
-      <mat-expansion-panel class="mat-panel-body">
-          <mat-expansion-panel-header class="mat-row">
-            <span class="mat-cell">Domaći zadaci</span>
-            <span class="mat-cell">Aleksandra Mitrović </span>
-            <span class="mat-cell">Wednesday, 10 October 2018, 3:36 PM</span>
-          </mat-expansion-panel-header>
-          <div>
-            <pre class="announcement__description">
-    Poštovani studenti,
-
-    Adresa za slanje domaćih zadataka je domacispa@gmail.com
-
-    Imenujte svoje arhive sa rešenjima po šablonu
-
-    Rokovi za predaju su 7 dana od dana objave.
-              </pre>
-            <p class="announcement__file">
-              <a href="#">
-                  <i class="material-icons">insert_drive_file</i>
-                  <p>Kriptologija 1 NS 2019.pdf</p></a>
-            </p>
-          </div>
-        </mat-expansion-panel>
-        <mat-expansion-panel class="mat-panel-body">
-            <mat-expansion-panel-header class="mat-row">
-              <span class="mat-cell">Rezultati drugog kolokvijuma - 15.05.2019.</span>
-              <span class="mat-cell">Aleksandra Mitrović </span>
-              <span class="mat-cell">Wednesday, 10 October 2018, 3:36 PM</span>
-            </mat-expansion-panel-header>
-            <div>
-              <pre class="announcement__description">
-      Poštovani studenti,
-
-      Adresa za slanje domaćih zadataka je domacispa@gmail.com
-
-      Imenujte svoje arhive sa rešenjima po šablonu
-
-      Rokovi za predaju su 7 dana od dana objave.
-                </pre>
-              <p class="announcement__file">
-                <a href="#">
-                    <i class="material-icons">insert_drive_file</i>
-                    <p>Kriptologija 1 NS 2019.pdf</p></a>
-              </p>
-            </div>
-          </mat-expansion-panel>
-          <mat-expansion-panel class="mat-panel-body">
-              <mat-expansion-panel-header class="mat-row">
-                <span class="mat-cell">Domaći zadaci</span>
-                <span class="mat-cell">Aleksandra Mitrović </span>
-                <span class="mat-cell">Wednesday, 10 October 2018, 3:36 PM</span>
-              </mat-expansion-panel-header>
-              <div>
-                <pre class="announcement__description">
-        Poštovani studenti,
-
-        Adresa za slanje domaćih zadataka je domacispa@gmail.com
-
-        Imenujte svoje arhive sa rešenjima po šablonu
-
-        Rokovi za predaju su 7 dana od dana objave.
-                  </pre>
-                <p class="announcement__file">
-                  <a href="#">
-                      <i class="material-icons">insert_drive_file</i>
-                      <p>Kriptologija 1 NS 2019.pdf</p></a>
-                </p>
-              </div>
-            </mat-expansion-panel>
-            <mat-expansion-panel class="mat-panel-body">
-                <mat-expansion-panel-header class="mat-row">
-                  <span class="mat-cell">Rezultati drugog kolokvijuma - 15.05.2019.</span>
-                  <span class="mat-cell">Aleksandra Mitrović </span>
-                  <span class="mat-cell">Wednesday, 10 October 2018, 3:36 PM</span>
-                </mat-expansion-panel-header>
-                <div>
-                  <pre class="announcement__description">
-          Poštovani studenti,
-
-          Adresa za slanje domaćih zadataka je domacispa@gmail.com
-
-          Imenujte svoje arhive sa rešenjima po šablonu
-
-          Rokovi za predaju su 7 dana od dana objave.
-                    </pre>
-                  <p class="announcement__file">
-                    <a href="#">
-                        <i class="material-icons">insert_drive_file</i>
-                        <p>Kriptologija 1 NS 2019.pdf</p></a>
-                  </p>
-                </div>
-              </mat-expansion-panel>
   </mat-accordion>

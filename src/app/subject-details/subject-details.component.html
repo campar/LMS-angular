@@ -4,29 +4,23 @@
 <h3 class="faculty-info__main-header">
   <div style="display:flex">
     <i class="material-icons">menu_book</i>
-    <p>{{subject.name}}</p>
+    <p>{{subject.subject.name}}</p>
   </div>
-    <p class="subject-details__espb">{{subject.espb}} ESPB</p>
+    <p class="subject-details__espb">{{subject.subject.espb}} ESPB</p>
 </h3>
-<p class="subject-details__description">Na ovom predmetu studenti stiču neophodna znanja iz osnova zaštite
-  informacionih sistema uz primenu matematičkog aparata koji je potreban
-  za analizu i sintezu savremenih šifarskih sistema. Savladavaju se osnovni
-  servisi zaštite informacija: tajnost, integritet, autentifikacija i neporecivost.
-   Detaljno se razmatraju svojstva simetričnih i asimetričnih šifarskih sistema.
-   Studenti će biti osposobljeni da samostalno procenjuju kvalitet zadatog šifarskog
-   sistema i razumeju njegovo mesto i ulogu u savremenom integrisanom računarskom
-   okruženju.
+<p class="subject-details__description">
+  {{subject.subject.description}}
 </p>
 
 <mat-tab-group style="margin-top:20px;" animationDuration="0ms">
   <mat-tab label="Silabus">
-    <app-silabus [syllabusOutcomes$]="subject.syllabusOutcomes"></app-silabus>
+    <app-silabus [syllabusOutcomes$]="subject.subject.syllabusOutcomes"></app-silabus>
   </mat-tab>
   <mat-tab label="Nastavni Materijal">
     <app-teaching-material></app-teaching-material>
   </mat-tab>
   <mat-tab label="Obavestenja">
-    <app-announcement></app-announcement>
+    <app-announcement [notifications]="subject.notifications"></app-announcement>
   </mat-tab>
   <mat-tab label="Rezultati ispita i kolokvijuma Forum">
     <app-exam-results></app-exam-results>
