@@ -24,7 +24,8 @@ import { DiscussionComponent } from './discussion/discussion.component';
 import { DiscussionSidebarWrapperComponent } from './discussion-sidebar-wrapper/discussion-sidebar-wrapper.component';
 import { CreateNotificationComponent } from './profesor/create-notification/create-notification.component';
 import { SingleStudentComponent } from './_shared/single-student/single-student.component';
-
+import { ChooseFacultyComponent } from './_shared/choose-faculty/choose-faculty.component';
+import { ChooseProgrammeComponent } from './_shared/choose-programme/choose-programme.component';
 
 const routes: Routes = [
   {
@@ -72,16 +73,24 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'profesorPanel/:programId',
+    path: 'profesorPanel',
     component: ProfesorSidebarWrapperComponent,
     children: [
-      { path: '', component: PregledStudenataComponent },
-      // { path: 'upravljanjeSilabusa', component: ManageSyllabusComponent, },
-      // { path: 'upravljanjeObavestenjima', component: ManageNotificationsComponent, },
-      { path: 'students', component: PregledStudenataComponent, },
-      { path: 'students/:id', component: SingleStudentComponent },
-      // { path: 'kreirajIshodSilabusa', component: CreateSyllabusOutcomeComponent, },
-      { path: 'notifications/create', component: CreateNotificationComponent, },
+      { path: 'university/:id', component: ChooseFacultyComponent },
+      { path: 'faculty/:id', component: ChooseProgrammeComponent },
+      {
+        path: ':programId/',
+        component: ProfesorSidebarWrapperComponent,
+        children: [
+          { path: '', component: PregledStudenataComponent },
+          // { path: 'upravljanjeSilabusa', component: ManageSyllabusComponent, },
+          // { path: 'upravljanjeObavestenjima', component: ManageNotificationsComponent, },
+          { path: 'students', component: PregledStudenataComponent, },
+          { path: 'students/:id', component: SingleStudentComponent },
+          // { path: 'kreirajIshodSilabusa', component: CreateSyllabusOutcomeComponent, },
+          { path: 'notifications/create', component: CreateNotificationComponent, },
+        ]
+      },
     ]
   },
   {

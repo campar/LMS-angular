@@ -5,29 +5,25 @@
         settings_applications
       </i> -->
     </div>
-    <h3 class="faculties-card__header" routerLink="/university/1/faculty/{{faculty.id}}">
+    <h3 class="faculties-card__header"
+      [routerLink]="[redirectUrl ? redirectUrl+faculty.id : '/university/1/faculty/'+faculty.id]">
       <small>{{faculty.name}}</small>
       <small class="faculties-card__sub-header">
         {{ faculty.description }}
       </small>
     </h3>
-
   </div>
   <ul class="faculties-card__group-icons d-none">
     <li>
-      <i class="material-icons">
-        folder
-      </i>
+      <i class="material-icons">folder</i>
     </li>
     <li>
       <img [src]="ANNOUNCEMENT" alt="">
     </li>
     <li>
-      <i class="material-icons">
-        chat
-      </i>
+      <i class="material-icons">chat</i>
     </li>
-    <li routerLink="/university/1/faculty/{{faculty.id}}">
+    <li>
       <i class="material-icons">
         info
       </i>

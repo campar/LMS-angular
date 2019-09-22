@@ -69,7 +69,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { SingleStudentComponent } from './_shared/single-student/single-student.component';
 import { ChooseFacultyComponent } from './_shared/choose-faculty/choose-faculty.component';
-
+import { ChooseProgrammeComponent } from './_shared/choose-programme/choose-programme.component';
 
 @NgModule({
   declarations: [
@@ -111,6 +111,7 @@ import { ChooseFacultyComponent } from './_shared/choose-faculty/choose-faculty.
     CreateNotificationComponent,
     SingleStudentComponent,
     ChooseFacultyComponent,
+    ChooseProgrammeComponent,
   ],
   imports: [
     BrowserModule,

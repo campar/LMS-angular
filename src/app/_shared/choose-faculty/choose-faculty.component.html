@@ -1,1 +1,7 @@
-<p>choose-faculty works!</p>
+<h2>Izaberite fakultet:</h2>
+
+<div class="faculties">
+  <app-faculties-card *ngFor="let faculty of university?.faculties" [faculty]="faculty"
+    [redirectUrl]="'/profesorPanel/faculty/'">
+  </app-faculties-card>
+</div>
