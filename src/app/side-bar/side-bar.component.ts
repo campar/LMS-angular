@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../_services';
+import { User } from '../_models';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
+  public authUser: User;
 
   private SIDEBARLOGO = require('../../assets/images/SINGIDUNUM_LOGO.png');
   private PREGLEDSTUDENATA = require('../../assets/images/students-icon.svg');
@@ -14,12 +17,16 @@ export class SideBarComponent implements OnInit {
   private PORUKA = require('../../assets/images/Mail-Icon-white.png');
   private AVATAR = require('../../assets/images/placeholder-profile-avatar.png');
 
-
-
-
-  constructor() { }
+  constructor(private authenticationService: AuthenticationService) {
+    authenticationService.currentUser.subscribe((user) => {
+      this.authUser = user;
+    })
+  }
 
   ngOnInit() {
   }
 
+  logout() {
+    this.authenticationService.logout();
+  }
 }

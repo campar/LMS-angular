@@ -1,34 +1,38 @@
 <!-- <div class="sidebar-wrapper"> -->
-  <ul class="sidebar">
-    <li>
-      <ul>
-        <li class="sidebar__logo">
-          <img height="35px" width="35px" [src]="SIDEBARLOGO" alt="">
-        </li>
-        <li class="sidebar__admin">
-          <img height="35px" width="35px" [src]="PANELICON" alt="">
-          <p>Panel Board</p>
-        </li>
-        <li class="sidebar__admin" routerLink="/profesorPanel/pregledStudenata">
-            <img height="35px" width="auto" [src]="PREGLEDSTUDENATA" alt="">
-            <p style="font-size:11px">Pregled Studenata</p>
-          </li>
-        <li class="sidebar__calendar">
-          <img height="35px" width="35px" [src]="KALENDAR" alt="">
-          <p>Kalendar</p>
-        </li>
-        <li class="sidebar__inbox">
-          <img height="35px" width="35px" [src]="PORUKA" alt="">
-          <p>Poruke</p>
-        </li>
-        <li class="sidebar__profile">
-          <img height="35px" width="35px" [src]="AVATAR" alt="">
-          <p>Vaš Nalog</p>
-        </li>
-      </ul>
-    </li>
-    <li class="sidebar__logout">
-      <i class="material-icons">power_settings_new</i>
-      <p>Odjava</p>
-    </li>
-  </ul>
+<ul class="sidebar">
+  <li>
+    <ul>
+      <li class="sidebar__logo">
+        <img height="35px" width="35px" [src]="SIDEBARLOGO" alt="" />
+      </li>
+      <li class="sidebar__admin">
+        <img height="35px" width="35px" [src]="PANELICON" alt="" />
+        <p>Panel Board</p>
+      </li>
+      <li class="sidebar__admin" routerLink="/profesorPanel/pregledStudenata">
+        <img height="35px" width="auto" [src]="PREGLEDSTUDENATA" alt="" />
+        <p style="font-size:11px">Pregled Studenata</p>
+      </li>
+      <li class="sidebar__calendar">
+        <img height="35px" width="35px" [src]="KALENDAR" alt="" />
+        <p>Kalendar</p>
+      </li>
+      <li class="sidebar__inbox">
+        <img height="35px" width="35px" [src]="PORUKA" alt="" />
+        <p>Poruke</p>
+      </li>
+      <li class="sidebar__profile">
+        <img height="35px" width="35px" [src]="AVATAR" alt="" />
+        <p>Vaš Nalog</p>
+      </li>
+    </ul>
+  </li>
+  <li *ngIf="authUser" (click)="logout()" class="sidebar__logout">
+    <i class="material-icons">power_settings_new</i>
+    <p>Odjava</p>
+  </li>
+  <li *ngIf="!authUser" routerLink="/login" class="sidebar__logout">
+    <i class="material-icons">exit_to_app</i>
+    <p>Prijava</p>
+  </li>
+</ul>
