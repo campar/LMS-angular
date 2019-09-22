@@ -15,8 +15,8 @@ export class DataService {
     return this.http.get(`${this.url}/university`);
   }
 
-  getSubjectById(id) {
-    return this.http.get(`${this.url}/subjects/${id}`);
+  getYearOfStudySubjectById(id) {
+    return this.http.get(`${this.url}/yearOfStudySubject/${id}`);
   }
 
   getFacultyDetails(id) {
