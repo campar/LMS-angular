@@ -22,15 +22,15 @@ export class AuthenticationService {
 
   login(username: string, password: string) {
     return this.http.post<any>(`${environment.apiUrl}/auth/signin`, { username, password })
-    .pipe(map(user => {
-      if (user && user.token) {
-        user.role = JSON.parse(atob(user.token.split('.')[1])).role[0];
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        this.currentUserSubject.next(user);
-      }
+      .pipe(map(user => {
+        if (user && user.token) {
+          user.role = JSON.parse(atob(user.token.split('.')[1])).role[0];
+          localStorage.setItem('currentUser', JSON.stringify(user));
+          this.currentUserSubject.next(user);
+        }
 
-      return user;
-    }));
+        return user;
+      }));
   }
 
   logout() {
