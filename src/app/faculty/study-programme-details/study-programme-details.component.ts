@@ -18,14 +18,6 @@ export class StudyProgrammeDetailsComponent implements OnInit {
 
     this.data.getStudyPrograme(id).subscribe(
         data => this.studyProgramme$ = data
-
       );
-    setTimeout(function() {
-      console.log(this.studyProgramme$);
-      }, 6000);
-
-
-
   }
-
 }
