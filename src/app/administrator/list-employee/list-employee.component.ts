@@ -9,6 +9,43 @@ import { Employee } from 'src/app/_models';
 })
 export class ListEmployeeComponent implements OnInit {
 
+  public tableHeaders: Array<object> = [
+    {
+      name: 'id',
+      value: "#",
+      sortableBy: 'id',
+      type: 'text'
+    },
+    {
+      name: 'username',
+      value: 'Username',
+      sortableBy: 'username',
+      type: 'text'
+    },
+    {
+      name: 'email',
+      value: 'email',
+      sortableBy: 'email',
+      type: 'text'
+    },
+    {
+      name: 'edit',
+      type: 'i',
+      class: 'material-icons edit-row-rable',
+      icon: 'edit',
+      tooltip: 'Uredi',
+      tooltipPosition: 'above'
+    },
+    {
+      name: 'delete',
+      type: 'i',
+      class: 'material-icons',
+      icon: 'delete_forever',
+      tooltip: 'Obriši',
+      tooltipPosition: 'above'
+    }
+  ]
+
   public employees: Employee[] = [];
 
   constructor(private usersService: UsersService) { }

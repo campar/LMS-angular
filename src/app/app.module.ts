@@ -75,6 +75,8 @@ import { CreateNotificationComponent } from './profesor/create-notification/crea
 import { AngularEditorModule } from '@kolkov/angular-editor';
 
 import { ScrollToModule } from 'ng2-scroll-to-el';
+import { LmsTableComponent } from './_shared/lms-table/lms-table.component';
+import { ThSortableDirective } from './_directives/th-sortable.directive';
 
 
 @NgModule({
@@ -119,6 +121,8 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
     DiscussionComponent,
     DiscussionSidebarWrapperComponent,
     CreateNotificationComponent,
+    LmsTableComponent,
+    ThSortableDirective,
   ],
   imports: [
     BrowserModule,
