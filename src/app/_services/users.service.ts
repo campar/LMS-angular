@@ -19,7 +19,7 @@ export class UsersService {
   }
 
   createProfessor(name: string, jmbg: string, username: string, biography: string, email: string, password: string) {
-    return this.http.put<Professor>(`${environment.apiUrl}/admin/user/professor`, { name, jmbg, username, biography, email, password });
+    return this.http.post<Professor>(`${environment.apiUrl}/admin/user/professor`, { name, jmbg, username, biography, email, password });
   }
 
   updateProfessor(id: number, name: string, jmbg: string, username: string, biography: string, email: string, password: string) {
@@ -35,7 +35,7 @@ export class UsersService {
   }
 
   createEmployee(username: string, email: string, password: string) {
-    return this.http.put<Employee>(`${environment.apiUrl}/admin/user/employee`, { username, email, password });
+    return this.http.post<Employee>(`${environment.apiUrl}/admin/user/employee`, { username, email, password });
   }
 
   updateEmployee(id: number, username: string, email: string, password: string) {

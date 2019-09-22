@@ -1,4 +1,18 @@
 <div class="admin-panel">
+  <ngb-alert
+    *ngIf="successfullyCreated"
+    (close)="closeSuccessfullyCreatedAlert()"
+    type="success"
+  >
+    Osoblje uspesno dodato
+  </ngb-alert>
+  <ngb-alert
+    *ngIf="successfullyUpdated"
+    (close)="closeSuccessfullyUpdatedAlert()"
+    type="success"
+  >
+    Osoblje uspesno ažurirano
+  </ngb-alert>
   <h3>Upravljaj Osobljem</h3>
   <app-lms-table
     [headers]="tableHeaders"
