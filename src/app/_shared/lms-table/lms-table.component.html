@@ -1,0 +1,32 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th
+        scope="col"
+        [sortable]="header.sortableBy"
+        (sort)="onSort($event)"
+        *ngFor="let header of headers"
+      >
+        {{ header.value }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows">
+      <td *ngFor="let headerIndex of columnNumberArray">
+        <ng-container *ngIf="headers[headerIndex].type === 'text'">
+          {{ row[headers[headerIndex].name] }}
+        </ng-container>
+        <i
+          *ngIf="headers[headerIndex].type === 'i'"
+          [class]="headers[headerIndex].class"
+          (click)="onActionClick(headers[headerIndex].name, row)"
+          [matTooltip]="headers[headerIndex].tooltip"
+          [matTooltipPosition]="headers[headerIndex].tooltipPosition"
+        >
+          {{ headers[headerIndex].icon }}
+        </i>
+      </td>
+    </tr>
+  </tbody>
+</table>
