@@ -93,8 +93,8 @@
         <div *ngIf="createForm.controls.password.errors.minlength">
           Lozinka mora imati najmanje 6 karaktera.
         </div>
-        <div *ngIf="createForm.controls.password.errors.minlength">
-          Lozinka ime mora imati najvise 100 karaktera.
+        <div *ngIf="createForm.controls.password.errors.maxlength">
+          Lozinka mora imati najvise 100 karaktera.
         </div>
       </div>
     </div>

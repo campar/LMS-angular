@@ -37,7 +37,7 @@ export class CreateEmployeeComponent implements OnInit {
       this.createForm.controls.email.value,
       this.createForm.controls.password.value
     ).subscribe(
-      (data: Employee) => {
+      () => {
         this.router.navigate(['/admin/employee'], { queryParams: { successfullyCreated: true } });
       },
       error => {
