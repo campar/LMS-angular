@@ -9,10 +9,10 @@ import { ActivatedRoute } from '@angular/router';
 export class ProfesorNavBarComponent implements OnInit {
   @Output() changedSelectedYear: EventEmitter<any> = new EventEmitter();
 
-  public baseUrl: String;
-  public subjectId: Number;
-  public years: Number[] = [1, 2, 3, 4];
-  public selectedYear: Number = 1;
+  public baseUrl: string;
+  public subjectId: number;
+  public years: number[] = [1, 2, 3, 4];
+  public selectedYear: number = 1;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 

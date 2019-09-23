@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class SideBarComponent implements OnInit {
   public authUser: User;
-  public baseUrl: String;
+  public baseUrl: string;
 
   private SIDEBARLOGO = require('../../assets/images/SINGIDUNUM_LOGO.png');
   private PREGLEDSTUDENATA = require('../../assets/images/students-icon.svg');

@@ -14,6 +14,6 @@ export class StudentService {
   }
 
   getStudentsByYearBySubject(yearId: number, subjectId: number) {
-    return this.http.get<Student>(`${environment.apiUrl}/student/subject/${subjectId}/${yearId}`);
+    return this.http.get<Student[]>(`${environment.apiUrl}/student/subject/${subjectId}/${yearId}`);
   }
 }

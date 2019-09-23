@@ -68,7 +68,7 @@ export class PregledStudenataComponent implements OnInit {
     }
   ]
 
-  public subjectId: Number;
+  public subjectId: number;
   public students: Student[] = [];
 
   constructor(private route: ActivatedRoute, private router: Router, private studentService: StudentService) { }

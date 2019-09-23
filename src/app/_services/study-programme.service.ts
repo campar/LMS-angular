@@ -18,7 +18,7 @@ export class StudyProgrammeService {
     }));
   }
 
-  allSubjectOfProfesorOnProgramme(id: Number, professorId: Number) {
+  allSubjectOfProfesorOnProgramme(id: number, professorId: number) {
     return this.http.get<Subject[]>(`${environment.apiUrl}/study-programmes/${id}/${professorId}/subjects`);
   }
 }
