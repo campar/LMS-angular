@@ -1,5 +1,8 @@
+<select [(ngModel)]="selectedYear" (change)="onChange($event.target.value)" class="form-control w-auto ml-3">
+  <option *ngFor="let yos of years; let i = index" [ngValue]="yos">{{ i + 1 }}. godina</option>
+</select>
+<br>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
 
@@ -41,7 +44,8 @@
           Pregled
         </a>
         <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
-          <a routerLink="/profesorPanel/pregledStudenata" class="dropdown-item" href="#"
+          <a [routerLink]="[baseUrl]" class="dropdown-item" href="#" (click)="$event.preventDefault()">Predmeta</a>
+          <a [routerLink]="[baseUrl + '/' + subjectId + '/students']" class="dropdown-item" href="#"
             (click)="$event.preventDefault()">Studenata</a>
         </div>
       </li>

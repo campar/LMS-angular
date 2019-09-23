@@ -2,6 +2,6 @@
 
 <div class="faculties">
   <app-faculties-card *ngFor="let faculty of university?.faculties" [faculty]="faculty"
-    [redirectUrl]="'/profesorPanel/faculty/'">
+    [redirectUrl]="['/university/' + universityId + '/profesorPanel/faculty/' + faculty.id]">
   </app-faculties-card>
 </div>

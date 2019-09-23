@@ -1,0 +1,6 @@
+<h3>Spisak predmeta:</h3>
+
+<app-lms-table [headers]="tableHeaders" [rows]="subjects" defaultSort="id" (onAction)="onTableAction($event)">
+</app-lms-table>
+
+<div *ngIf="subjects.length === 0" class="text-danger">Nema predmeta na ovom smeru!</div>

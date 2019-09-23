@@ -18,7 +18,6 @@ import { UpdateEmployeeComponent } from './administrator/update-employee/update-
 import { UpdateProfessorComponent } from './administrator/update-professor/update-professor.component';
 import { CreateEmployeeComponent } from './administrator/create-employee/create-employee.component';
 import { ListEmployeeComponent } from './administrator/list-employee/list-employee.component';
-import { ProfesorSidebarWrapperComponent } from './profesor/profesor-sidebar-wrapper/profesor-sidebar-wrapper.component';
 import { PregledStudenataComponent } from './profesor/pregled-studenata/pregled-studenata.component';
 import { DiscussionComponent } from './discussion/discussion.component';
 import { DiscussionSidebarWrapperComponent } from './discussion-sidebar-wrapper/discussion-sidebar-wrapper.component';
@@ -26,6 +25,7 @@ import { CreateNotificationComponent } from './profesor/create-notification/crea
 import { SingleStudentComponent } from './_shared/single-student/single-student.component';
 import { ChooseFacultyComponent } from './_shared/choose-faculty/choose-faculty.component';
 import { ChooseProgrammeComponent } from './_shared/choose-programme/choose-programme.component';
+import { ListSubjectsComponent } from './list-subjects/list-subjects.component';
 
 const routes: Routes = [
   {
@@ -54,21 +54,21 @@ const routes: Routes = [
         path: 'profesorPanel',
         component: null,
         children: [
-          { path: 'university/:id', component: ChooseFacultyComponent },
+          { path: '', component: ChooseFacultyComponent },
           { path: 'faculty/:id', component: ChooseProgrammeComponent },
           {
             path: ':programId',
             component: null,
             children: [
-              { path: '', component: PregledStudenataComponent },
+              { path: '', component: ListSubjectsComponent },
               // { path: 'upravljanjeSilabusa', component: ManageSyllabusComponent, },
               // { path: 'upravljanjeObavestenjima', component: ManageNotificationsComponent, },
-              { path: 'students', component: PregledStudenataComponent, },
-              { path: 'students/:id', component: SingleStudentComponent },
+              { path: ':subjectId/students', component: PregledStudenataComponent, },
+              { path: ':subjectId/students/:id', component: SingleStudentComponent },
               // { path: 'kreirajIshodSilabusa', component: CreateSyllabusOutcomeComponent, },
-              { path: 'notifications/create', component: CreateNotificationComponent, },
+              { path: '::subjectId/notifications/create', component: CreateNotificationComponent, },
             ]
-          },
+          }
         ]
       }
     ]

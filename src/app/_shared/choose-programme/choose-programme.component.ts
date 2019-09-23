@@ -10,6 +10,7 @@ import { FacultiesService } from '../../_services/faculties.service';
 })
 export class ChooseProgrammeComponent implements OnInit {
   public faculty: Faculty;
+  public universityId: number;
 
   constructor(private facultiesService: FacultiesService, private route: ActivatedRoute) { }
 
@@ -19,7 +20,7 @@ export class ChooseProgrammeComponent implements OnInit {
     this.facultiesService.getFaculty(id).subscribe(
       data => {
         this.faculty = data;
-        console.log(data);
+        this.universityId = id;
       });
   }
 }

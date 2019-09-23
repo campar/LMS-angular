@@ -72,6 +72,8 @@ import { ChooseFacultyComponent } from './_shared/choose-faculty/choose-faculty.
 import { ChooseProgrammeComponent } from './_shared/choose-programme/choose-programme.component';
 import { LmsTableComponent } from './_shared/lms-table/lms-table.component';
 import { ThSortableDirective } from './_directives/th-sortable.directive';
+import { ListSubjectsComponent } from './list-subjects/list-subjects.component';
+import { SubjectsNavbarComponent } from './subjects-navbar/subjects-navbar.component';
 
 @NgModule({
   declarations: [
@@ -116,6 +118,8 @@ import { ThSortableDirective } from './_directives/th-sortable.directive';
     ChooseProgrammeComponent,
     LmsTableComponent,
     ThSortableDirective,
+    ListSubjectsComponent,
+    SubjectsNavbarComponent,
   ],
   imports: [
     BrowserModule,

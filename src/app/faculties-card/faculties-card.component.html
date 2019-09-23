@@ -1,12 +1,11 @@
 <div class="faculties-card">
   <div class="faculties-card__background">
     <div class="faculties-card__settings">
-      <!-- <i class="material-icons">
+      <i class="material-icons">
         settings_applications
-      </i> -->
+      </i>
     </div>
-    <h3 class="faculties-card__header"
-      [routerLink]="[redirectUrl ? redirectUrl+faculty.id : '/university/1/faculty/'+faculty.id]">
+    <h3 class="faculties-card__header" [routerLink]="redirectUrl ? redirectUrl : ('/university/1/faculty/'+faculty.id)">
       <small>{{faculty.name}}</small>
       <small class="faculties-card__sub-header">
         {{ faculty.description }}

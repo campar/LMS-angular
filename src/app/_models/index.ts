@@ -9,3 +9,4 @@ export * from './role';
 export * from './study-programme';
 export * from './university';
 export * from './user';
+export * from './subject';

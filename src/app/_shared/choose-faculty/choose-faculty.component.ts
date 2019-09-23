@@ -9,14 +9,15 @@ import { UniversitiesService } from '../../_services/univerisities.service';
   styleUrls: ['./choose-faculty.component.scss']
 })
 export class ChooseFacultyComponent implements OnInit {
+  public universityId: number;
   public university: University;
 
   constructor(private universitiesService: UniversitiesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.universityId = Number(this.route.parent.parent.snapshot.params.id);
 
-    this.universitiesService.getUniversity(id).subscribe(
+    this.universitiesService.getUniversity(this.universityId).subscribe(
       data => {
         this.university = data;
       });
