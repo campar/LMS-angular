@@ -31,5 +31,14 @@ export class SideBarComponent implements OnInit {
 
   logout() {
     this.authenticationService.logout();
+    window.location.reload();
+  }
+
+  goToPanelBoard() {
+    if (this.authUser && this.authUser.role === 'ROLE_ADMIN') {
+      this.router.navigate(['/admin']);
+    } else {
+      alert('Za ovog korisnika jos uvek nije implementiran panel');
+    }
   }
 }

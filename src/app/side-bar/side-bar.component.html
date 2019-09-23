@@ -2,25 +2,29 @@
 <ul class="sidebar">
   <li>
     <ul>
-      <li class="sidebar__logo">
+      <li class="sidebar__logo" routerLink="/">
         <img height="35px" width="35px" [src]="SIDEBARLOGO" alt="" />
       </li>
-      <li class="sidebar__admin">
+      <li class="sidebar__admin" (click)="goToPanelBoard()">
         <img height="35px" width="35px" [src]="PANELICON" alt="" />
         <p>Panel Board</p>
       </li>
-      <li class="sidebar__admin" [routerLink]="[baseUrl + '/profesorPanel']">
+      <li
+        *ngIf="authUser?.role === 'ROLE_PROFESSOR'"
+        class="sidebar__admin"
+        [routerLink]="[baseUrl + '/profesorPanel']"
+      >
         <img height="35px" width="auto" [src]="PREGLEDSTUDENATA" alt="" />
         <p style="font-size:11px">Pregled Studenata</p>
       </li>
-      <li class="sidebar__inbox">
+      <!-- <li class="sidebar__inbox">
         <img height="35px" width="35px" [src]="PORUKA" alt="" />
         <p>Poruke</p>
       </li>
       <li class="sidebar__profile">
         <img height="35px" width="35px" [src]="AVATAR" alt="" />
         <p>Vaš Nalog</p>
-      </li>
+      </li> -->
     </ul>
   </li>
   <li *ngIf="authUser" (click)="logout()" class="sidebar__logout">
