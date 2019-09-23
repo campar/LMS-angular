@@ -53,6 +53,8 @@ const routes: Routes = [
       {
         path: 'profesorPanel',
         component: null,
+        canActivate: [AuthGuard],
+        data: { roles: [Role.Professor] },
         children: [
           { path: '', component: ChooseFacultyComponent },
           { path: 'faculty/:id', component: ChooseProgrammeComponent },
@@ -83,6 +85,8 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminSidebarWrapperComponent,
+    canActivate: [AuthGuard],
+    data: { roles: [Role.Admin] },
     children: [
       { path: 'professor/new', component: CreateProfessorComponent, },
       { path: 'professor', component: ListProfessorComponent, },
