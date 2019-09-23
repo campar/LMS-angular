@@ -25,12 +25,6 @@ export class PregledStudenataComponent implements OnInit {
       type: 'text'
     },
     {
-      name: 'last_name',
-      value: 'Prezine',
-      sortableBy: 'last_name',
-      type: 'text'
-    },
-    {
       name: 'username',
       value: 'Korisnicko ime',
       sortableBy: 'username',
