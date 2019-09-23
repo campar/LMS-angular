@@ -26,11 +26,6 @@ export class UpdateProfessorComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.updateForm.invalid) {
-      this.updateForm.markAllAsTouched();
-      return;
-    }
-
     this.usersService.getProfessor(Number(this.route.snapshot.paramMap.get('id')))
       .subscribe(
         data => {
