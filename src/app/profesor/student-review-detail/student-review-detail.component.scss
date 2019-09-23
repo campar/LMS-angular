@@ -1,0 +1,49 @@
+h3{
+  text-align: center;
+}
+
+h4{
+  text-align: center;
+}
+.base-info__table{
+  width:50%;
+  position: relative;
+  left: 25%;
+  transform: translateX(-25%);
+  // align-self: center;
+  td{
+    text-align: end;
+  }
+}
+
+.student-profile__avatar{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  img{
+    width:200px;
+    height: 200px;
+    border-radius: 100%;
+  }
+}
+
+.student-profile__base-info{
+  display: flex;
+  // align-items: center;
+  margin-top:60px;
+}
+
+table{
+  width: 100%;
+  margin-top:10px;
+}
+
+tbody{
+  width: 100%;
+}
+
+th{
+  span{
+    margin-left:20px;
+  }
+}

@@ -26,6 +26,9 @@ import { SingleStudentComponent } from './_shared/single-student/single-student.
 import { ChooseFacultyComponent } from './_shared/choose-faculty/choose-faculty.component';
 import { ChooseProgrammeComponent } from './_shared/choose-programme/choose-programme.component';
 import { ListSubjectsComponent } from './list-subjects/list-subjects.component';
+import { ManageSyllabusComponent } from './profesor/manage-syllabus/manage-syllabus.component';
+import { ManageNotificationsComponent } from './profesor/manage-notifications/manage-notifications.component';
+import { CreateSyllabusOutcomeComponent } from './profesor/create-syllabus-outcome/create-syllabus-outcome.component';
 
 const routes: Routes = [
   {
@@ -63,11 +66,11 @@ const routes: Routes = [
             component: null,
             children: [
               { path: '', component: ListSubjectsComponent },
-              // { path: ':subjectId/manage-syllabus', component: ManageSyllabusComponent, },
-              // { path: ':subjectId/manage-notifications', component: ManageNotificationsComponent, },
+              { path: ':subjectId/manage-syllabus', component: ManageSyllabusComponent, },
+              { path: ':subjectId/manage-notifications', component: ManageNotificationsComponent, },
               { path: ':subjectId/students', component: PregledStudenataComponent, },
               { path: ':subjectId/students/:id', component: SingleStudentComponent },
-              // { path: ':subjectId/create-syllabus', component: CreateSyllabusOutcomeComponent, },
+              { path: ':subjectId/create-syllabus', component: CreateSyllabusOutcomeComponent, },
               { path: ':subjectId/create-notifications', component: CreateNotificationComponent },
             ]
           }
