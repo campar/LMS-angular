@@ -45,7 +45,7 @@ export class CreateProfessorComponent implements OnInit {
       this.createForm.controls.email.value,
       this.createForm.controls.password.value,
     ).subscribe(
-      (data: Professor) => {
+      () => {
         this.router.navigate(['/admin/professor'], { queryParams: { successfullyCreated: true } });
       },
       error => {
