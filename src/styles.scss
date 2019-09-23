@@ -5,13 +5,17 @@
 @import '~angular-tree-component/dist/angular-tree-component.css';
 
 .wrapper {
-  margin-right: auto; /* 1 */
-  margin-left:  auto; /* 1 */
+  margin-right: auto;
+  /* 1 */
+  margin-left: auto;
+  /* 1 */
 
-  max-width: 960px; /* 2 */
-  width:100%;
+  max-width: 960px;
+  /* 2 */
+  width: 100%;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,18 +23,20 @@
 
 
 html,
-body{
-width: 100%;
-height: 100%;
-margin: 0;
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
-body{
+
+body {
   font-family: sans-serif, "Roboto" !important;
 }
 
-html{
+html {
   // font-family: sans-serif, "Roboto" !important;
 }
+
 // html {
 //   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
@@ -53,7 +59,7 @@ html{
 
 
 ul,
-ol{
+ol {
   list-style: none;
 }
 
@@ -68,19 +74,20 @@ ol{
 //   resize: none;
 // }
 
-button{
-// outline: none;
-cursor: pointer;
-border: 0;
-// height: 100%;
-font-size: 100%;
-font-family: inherit;
-// padding: 0 !important;
-// margin: 0  !important;
-&:focus{
-  outline: none;
+button {
+  // outline: none;
+  cursor: pointer;
   border: 0;
-}
+  // height: 100%;
+  font-size: 100%;
+  font-family: inherit;
+
+  // padding: 0 !important;
+  // margin: 0  !important;
+  &:focus {
+    outline: none;
+    border: 0;
+  }
 }
 
 // input{
@@ -92,202 +99,217 @@ font-family: inherit;
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0;}
+  margin: 0;
+}
 
-input{
+input {
   border: none;
-  &:focus{
+
+  &:focus {
     outline: none;
   }
 }
-  .wrapper {
-    margin-right: auto; /* 1 */
-    margin-left:  auto; /* 1 */
 
-    width: 960px; /* 2 */
-  }
+.wrapper {
+  margin-right: auto;
+  /* 1 */
+  margin-left: auto;
+  /* 1 */
 
-
-
-
-
-  .university-details__main{
-    margin-left:100px;
-    margin-right:300px;
-    word-wrap: break-word;
-    padding:0 20px;
-    padding-top:20px;
-    padding-bottom:60px;
-    transition: margin-right 0.5s;
-  }
-
-  .university-details__header{
-
-    ul{
-      padding-bottom:20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-    }
-  }
-
-  .university-details__chat-toggle{
-    display:flex;
-    // justify-content: center;
-    align-items: center;
-    p{
-      margin-right:5px;
-    }
-  }
-
-  .faculties{
-   display: flex;
-   flex-wrap: wrap;
-   justify-content:flex-start;
-  }
-
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-
-  input:checked + .slider {
-    background-color: #354350;
-  }
-
-  input:focus + .slider {
-    box-shadow: 0 0 1px #354350;
-  }
-
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-
-  .slider.round:before {
-    border-radius: 50%;
-  }
-
-  .faculty-info__main-header{
-    margin-top:25px;
-    background:#eeebeb;
-    display: flex;
-    align-items: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    justify-content: space-between;
-    padding:6px;
-    font-size:20px;
-    color:#363636;
-    i{
-      margin-left:10px;
-      margin-right:5px;
-    }
-  }
-
-  .mat-tab-body-content {
-    padding: 20px;
-    padding-top:25px;
+  width: 960px;
+  /* 2 */
 }
 
-  .tab__header{
-    font-size:35px;
-    text-align: center;
-    margin-bottom:20px;
+
+
+
+
+.university-details__main {
+  margin-left: 100px;
+  margin-right: 300px;
+  word-wrap: break-word;
+  padding: 0 20px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  transition: margin-right 0.5s;
+}
+
+.university-details__header {
+
+  ul {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
   }
+}
+
+.university-details__chat-toggle {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+
+  p {
+    margin-right: 5px;
+  }
+}
+
+.faculties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #354350;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #354350;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.faculty-info__main-header {
+  margin-top: 25px;
+  background: #eeebeb;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  justify-content: space-between;
+  padding: 6px;
+  font-size: 20px;
+  color: #363636;
+
+  i {
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+}
+
+.mat-tab-body-content {
+  padding: 20px;
+  padding-top: 25px;
+}
+
+.tab__header {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 
-  .mat-expanded{
+.mat-expanded {
 
-    .mat-row{
-      background:#ddd !important;
-      &:hover{
-        background:#ddd !important;
-      }
+  .mat-row {
+    background: #ddd !important;
+
+    &:hover {
+      background: #ddd !important;
     }
   }
+}
 
-  .node-wrapper {
-    align-items: center !important;
-    cursor: default !important;
-  }
+.node-wrapper {
+  align-items: center !important;
+  cursor: default !important;
+}
 
-  .toggle-children{
-    background-image: url("https://files.slack.com/files-pri/T4UC75PUH-FMUQUK1T2/1.png");
-    // transform: rotate(0) !important;
-    height:40px;
-    width:40px;
-    cursor: pointer !important;
-  }
+.toggle-children {
+  background-image: url("https://files.slack.com/files-pri/T4UC75PUH-FMUQUK1T2/1.png");
+  // transform: rotate(0) !important;
+  height: 40px;
+  width: 40px;
+  cursor: pointer !important;
+}
 
 .toggle-children-wrapper-expanded .toggle-children {
-    transform: rotate(0) !important;
-    background-image: url("https://files.slack.com/files-pri/T4UC75PUH-FMHBPA72P/2.png");
+  transform: rotate(0) !important;
+  background-image: url("https://files.slack.com/files-pri/T4UC75PUH-FMHBPA72P/2.png");
 }
 
-.node-content-wrapper{
+.node-content-wrapper {
   color: black !important;
   font-weight: 700;
   cursor: pointer;
-  span{
-    &:hover{
+
+  span {
+    &:hover {
       text-decoration: underline;
     }
   }
-  &:hover{
-    background:none !important;
+
+  &:hover {
+    background: none !important;
     box-shadow: none;
   }
 }
 
-tree-viewport{
+tree-viewport {
   overflow-y: hidden !important;
 }
 
-.node-content-wrapper-active, .node-content-wrapper.node-content-wrapper-active:hover, .node-content-wrapper-active.node-content-wrapper-focused {
+.node-content-wrapper-active,
+.node-content-wrapper.node-content-wrapper-active:hover,
+.node-content-wrapper-active.node-content-wrapper-focused {
   background: none !important;
 }
 
-.node-content-wrapper-active, .node-content-wrapper-focused, .node-content-wrapper:hover {
+.node-content-wrapper-active,
+.node-content-wrapper-focused,
+.node-content-wrapper:hover {
   box-shadow: none !important;
 }
 
@@ -295,29 +317,31 @@ tree-viewport{
   background: none !important;
 }
 
-.toggle-children-placeholder{
-  background-image:url("https://files.slack.com/files-pri/T4UC75PUH-FMX1LR79U/document__1_.png");
+.toggle-children-placeholder {
+  background-image: url("https://files.slack.com/files-pri/T4UC75PUH-FMX1LR79U/document__1_.png");
 
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
-  height:25px;
-  width:25px;
+  height: 25px;
+  width: 25px;
 }
 
 tree-node-expander {
   cursor: pointer;
-  &:hover{
-  + .node-content-wrapper span{
+
+  &:hover {
+    +.node-content-wrapper span {
       text-decoration: underline;
     }
   }
 }
 
-.tree-node-leaf{
-  span{
-    font-weight:400;
-    color:#555555;
-    &:hover{
+.tree-node-leaf {
+  span {
+    font-weight: 400;
+    color: #555555;
+
+    &:hover {
       text-decoration-color: #555555;
       // background:none !important;
       box-shadow: none !important;
@@ -354,39 +378,41 @@ tree-node-expander {
 //   }
 // }
 
-.attach-file{
+.attach-file {
   position: absolute;
-  top:0;
-  bottom:0;
-  right:0;
-  padding:0px 20px;
-  background:#a8a8a8;
-  cursor:pointer;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0px 20px;
+  background: #a8a8a8;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  i{
+
+  i {
     // background:red;
   }
 }
 
 
-.admin-panel{
+.admin-panel {
   position: relative;
-  left:50%;
-  transform:translateX(-50%);
-  width:90%;
-  h3{
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+
+  h3 {
     text-align: center;
     margin: 30px 0;
   }
 }
 
-p{
-  margin: 0 ;
+p {
+  margin: 0;
 }
 
 .mat-tooltip {
-  margin-bottom:1px !important;
+  margin-bottom: 1px !important;
 }
 
 
@@ -402,46 +428,54 @@ p{
 }
 
 
-i:focus{
-  outline:none;
+i:focus {
+  outline: none;
 }
 
 
-.send-button{
-    background:#5a7ee9;
-    color:#fff;
-    padding:15px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-radius:5px;
-    font-size:14px;
-    &:hover{
-      background:#6d91fa;
-    }
-    &:focus{
-      background:#5a7ee9;
-    }
-}
+.send-button {
+  background: #5a7ee9;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 14px;
 
-.send-message{
-  &__button{
-    margin-top:30px;
+  &:hover {
+    background: #6d91fa;
   }
-  &__icon{
-    margin-left:10px;
+
+  &:focus {
+    background: #5a7ee9;
   }
 }
 
+.send-message {
+  &__button {
+    margin-top: 30px;
+  }
 
-.is-invalid{
-  .angular-editor-textarea{
+  &__icon {
+    margin-left: 10px;
+  }
+}
+
+
+.is-invalid {
+  .angular-editor-textarea {
 
     border: 1px solid #dc3545 !important;
-    border-radius:5px;
+    border-radius: 5px;
   }
 }
 
-.angular-editor-textarea{
-  border-radius:5px !important;
+.angular-editor-textarea {
+  border-radius: 5px !important;
+}
+
+
+.form-control.is-invalid~.error-message {
+  color: #dc3545
 }

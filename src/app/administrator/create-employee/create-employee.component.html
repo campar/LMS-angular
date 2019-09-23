@@ -3,25 +3,16 @@
   <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="username">Korisnicko ime</label>
-      <input
-        type="text"
-        class="form-control"
-        [class.is-invalid]="
+      <input type="text" class="form-control" [class.is-invalid]="
           createForm.controls.username.invalid &&
           (createForm.controls.username.dirty ||
             createForm.controls.username.touched)
-        "
-        id="username"
-        placeholder="Korisnicko ime"
-        formControlName="username"
-      />
-      <div
-        *ngIf="
+        " id="username" placeholder="Korisnicko ime" formControlName="username" />
+      <div class="error-message" *ngIf="
           createForm.controls.username.invalid &&
           (createForm.controls.username.dirty ||
             createForm.controls.username.touched)
-        "
-      >
+        ">
         <div *ngIf="createForm.controls.username.errors.required">
           Korisnicko ime je obavezno.
         </div>
@@ -35,26 +26,15 @@
     </div>
     <div class="form-group">
       <label for="email">Email adresa</label>
-      <input
-        type="email"
-        class="form-control"
-        [class.is-invalid]="
+      <input type="email" class="form-control" [class.is-invalid]="
           createForm.controls.email.invalid &&
           (createForm.controls.email.dirty || createForm.controls.email.touched)
-        "
-        id="email"
-        placeholder="Email"
-        formControlName="email"
-      />
-      <small id="emailHelp" class="form-text text-muted"
-        >Nikada nećemo deliti vaš email sa trećim licima</small
-      >
-      <div
-        *ngIf="
+        " id="email" placeholder="Email" formControlName="email" />
+      <small id="emailHelp" class="form-text text-muted">Nikada nećemo deliti vaš email sa trećim licima</small>
+      <div class="error-message" *ngIf="
           createForm.controls.email.invalid &&
           (createForm.controls.email.dirty || createForm.controls.email.touched)
-        "
-      >
+        ">
         <div *ngIf="createForm.controls.email.errors.required">
           E-Mail je obavezan.
         </div>
@@ -68,25 +48,16 @@
     </div>
     <div class="form-group">
       <label for="password">Lozinka</label>
-      <input
-        type="password"
-        class="form-control"
-        [class.is-invalid]="
+      <input type="password" class="form-control" [class.is-invalid]="
           createForm.controls.password.invalid &&
           (createForm.controls.password.dirty ||
             createForm.controls.password.touched)
-        "
-        id="password"
-        placeholder="Lozinka"
-        formControlName="password"
-      />
-      <div
-        *ngIf="
+        " id="password" placeholder="Lozinka" formControlName="password" />
+      <div class="error-message" *ngIf="
           createForm.controls.password.invalid &&
           (createForm.controls.password.dirty ||
             createForm.controls.password.touched)
-        "
-      >
+        ">
         <div *ngIf="createForm.controls.password.errors.required">
           Lozinka je obavezna.
         </div>
