@@ -43,6 +43,11 @@ export class UpdateProfessorComponent implements OnInit {
   }
 
   onSubmit() {
+    if (this.updateForm.invalid) {
+      this.updateForm.markAllAsTouched();
+      return;
+    }
+
     this.usersService.updateProfessor(
       this.professor.id,
       this.updateForm.controls.name.value,
