@@ -21,7 +21,7 @@ export class SubjectDetailsComponent implements OnInit {
     this.subject = {};
     const id = this.route.snapshot.paramMap.get('id');
 
-    this.data.getSubjectById(id).subscribe(
+    this.data.getYearOfStudySubjectById(id).subscribe(
         data => this.subject = data
       );
   }

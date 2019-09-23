@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/_services/users.service';
 import { Professor } from 'src/app/_models';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-list-professor',
@@ -54,10 +54,15 @@ export class ListProfessorComponent implements OnInit {
   ]
 
   public professors: Professor[] = [];
+  public successfullyCreated: boolean = false;
+  public successfullyUpdated: boolean = false;
 
-  constructor(private router: Router, private usersService: UsersService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private usersService: UsersService) { }
 
   ngOnInit() {
+    this.successfullyCreated = !!this.route.snapshot.queryParamMap.get("successfullyCreated");
+    this.successfullyUpdated = !!this.route.snapshot.queryParamMap.get("successfullyUpdated");
+
     this.usersService.getProfessors()
       .subscribe(
         data => {
@@ -73,6 +78,14 @@ export class ListProfessorComponent implements OnInit {
       case 'edit':
         this.router.navigate([`/admin/professor/${event.row.id}`])
     }
+  }
+
+  closeSuccessfullyCreatedAlert() {
+    this.successfullyCreated = false;
+  }
+
+  closeSuccessfullyUpdatedAlert() {
+    this.successfullyUpdated = false;
   }
 
 }

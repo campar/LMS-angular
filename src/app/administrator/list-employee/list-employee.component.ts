@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/_services/users.service';
 import { Employee } from 'src/app/_models';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-employee',
@@ -47,10 +48,15 @@ export class ListEmployeeComponent implements OnInit {
   ]
 
   public employees: Employee[] = [];
+  public successfullyCreated: boolean = false;
+  public successfullyUpdated: boolean = false;
 
-  constructor(private usersService: UsersService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private usersService: UsersService) { }
 
   ngOnInit() {
+    this.successfullyCreated = !!this.route.snapshot.queryParamMap.get("successfullyCreated");
+    this.successfullyUpdated = !!this.route.snapshot.queryParamMap.get("successfullyUpdated");
+
     this.usersService.getEmployees()
       .subscribe(
         data => {
@@ -59,5 +65,20 @@ export class ListEmployeeComponent implements OnInit {
         error => {
           console.log(error);
         });
+  }
+
+  onTableAction(event: any) {
+    switch (event.name) {
+      case 'edit':
+        this.router.navigate([`/admin/employee/${event.row.id}`])
+    }
+  }
+
+  closeSuccessfullyCreatedAlert() {
+    this.successfullyCreated = false;
+  }
+
+  closeSuccessfullyUpdatedAlert() {
+    this.successfullyUpdated = false;
   }
 }

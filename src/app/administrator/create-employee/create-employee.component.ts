@@ -20,20 +20,25 @@ export class CreateEmployeeComponent implements OnInit {
 
   ngOnInit() {
     this.createForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      email: ['', Validators.required],
-      password: ['', Validators.required],
+      username: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
+      email: ['', [Validators.required, Validators.email, Validators.maxLength(50)]],
+      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(100)]],
     });
   }
 
   onSubmit() {
+    if (this.createForm.invalid) {
+      this.createForm.markAllAsTouched();
+      return;
+    }
+
     this.usersService.createEmployee(
       this.createForm.controls.username.value,
       this.createForm.controls.email.value,
       this.createForm.controls.password.value
     ).subscribe(
-      (data: Employee) => {
-        this.router.navigate(['/admin/employee']);
+      () => {
+        this.router.navigate(['/admin/employee'], { queryParams: { successfullyCreated: true } });
       },
       error => {
         console.log(error);
