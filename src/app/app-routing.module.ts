@@ -61,12 +61,12 @@ const routes: Routes = [
             component: null,
             children: [
               { path: '', component: ListSubjectsComponent },
-              // { path: 'upravljanjeSilabusa', component: ManageSyllabusComponent, },
-              // { path: 'upravljanjeObavestenjima', component: ManageNotificationsComponent, },
+              // { path: ':subjectId/manage-syllabus', component: ManageSyllabusComponent, },
+              // { path: ':subjectId/manage-notifications', component: ManageNotificationsComponent, },
               { path: ':subjectId/students', component: PregledStudenataComponent, },
               { path: ':subjectId/students/:id', component: SingleStudentComponent },
-              // { path: 'kreirajIshodSilabusa', component: CreateSyllabusOutcomeComponent, },
-              { path: '::subjectId/notifications/create', component: CreateNotificationComponent, },
+              // { path: ':subjectId/create-syllabus', component: CreateSyllabusOutcomeComponent, },
+              { path: ':subjectId/create-notifications', component: CreateNotificationComponent },
             ]
           }
         ]

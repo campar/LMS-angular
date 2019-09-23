@@ -11,9 +11,12 @@
           role="group" aria-label="Button group with nested dropdown">
           <button class="btn btn-outline-success color-white" ngbDropdownToggle>Kreiraj</button>
           <div class="dropdown-menu" ngbDropdownMenu>
-            <button routerLink="/profesorPanel/kreirajIshodSilabusa" routerLinkActive="is-active" ngbDropdownItem>
-              <span>Ishod Silabusa</span></button>
-            <button routerLink="/profesorPanel/kreirajObavestenje" routerLinkActive="is-active" ngbDropdownItem>
+            <button [routerLink]="[baseUrl + '/' + subjectId + '/create-syllabus']" routerLinkActive="is-active"
+              ngbDropdownItem>
+              <span>Ishod Silabusa</span>
+            </button>
+            <button [routerLink]="[baseUrl + '/' + subjectId + '/create-notifications']" routerLinkActive="is-active"
+              ngbDropdownItem>
               <span>Obavestenje</span></button>
             <!-- <button routerLink="/profesorPanel/kreirajStudenta" routerLinkActive="is-active" ngbDropdownItem> <span>Studenta</span></button> -->
           </div>
@@ -24,9 +27,9 @@
           role="group" aria-label="Button group with nested dropdown">
           <button class="btn btn-outline-primary color-white" id="dropdownConfig" ngbDropdownToggle>Upravljaj</button>
           <div ngbDropdownMenu aria-labelledby="dropdownConfig">
-            <button routerLink="/profesorPanel/upravljanjeSilabusa" routerLinkActive="is-active"
+            <button [routerLink]="[baseUrl + '/' + subjectId + '/manage-syllabus']" routerLinkActive="is-active"
               ngbDropdownItem><span>Silabusom</span></button>
-            <button routerLink="/profesorPanel/upravljanjeObavestenjima" routerLinkActive="is-active"
+            <button [routerLink]="[baseUrl + '/' + subjectId + '/manage-notifications']" routerLinkActive="is-active"
               ngbDropdownItem><span>Obavestenjima</span></button>
           </div>
         </div>
