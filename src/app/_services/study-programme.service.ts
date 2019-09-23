@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
-import { StudyProgramme, Professor, Degree } from '../_models';
+import { StudyProgramme, Professor, Degree, Subject } from '../_models';
 import { map } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
@@ -16,5 +16,9 @@ export class StudyProgrammeService {
       res.degree = new Degree({ name: res.degree });
       return new StudyProgramme(res)
     }));
+  }
+
+  allSubjectOfProfesorOnProgramme(id: Number, professorId: Number) {
+    return this.http.get<Subject[]>(`${environment.apiUrl}/study-programmes/${id}/${professorId}/subjects`);
   }
 }

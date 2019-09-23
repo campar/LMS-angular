@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FacultiesCardComponent implements OnInit {
 
   @Input() faculty: object;
+  @Input() redirectUrl: String;
 
   private ANNOUNCEMENT = require('../../assets/images/megaphone.png');
 

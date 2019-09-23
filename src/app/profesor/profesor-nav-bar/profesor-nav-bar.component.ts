@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profesor-nav-bar',
@@ -6,12 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profesor-nav-bar.component.scss']
 })
 export class ProfesorNavBarComponent implements OnInit {
+  @Output() changedSelectedYear: EventEmitter<any> = new EventEmitter();
 
-  private FILTER = require('../../../assets/images/filter-icon.png');
+  public baseUrl: String;
+  public subjectId: Number;
+  public years: Number[] = [1, 2, 3, 4];
+  public selectedYear: Number = 1;
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    let universityId = this.activatedRoute.parent.parent.parent.snapshot.params.id;
+    let programId = this.activatedRoute.snapshot.params.programId;
+    this.baseUrl = `/university/${universityId}/profesorPanel/${programId}`;
+    this.subjectId = this.activatedRoute.snapshot.params.subjectId;
   }
 
+  onChange() {
+    this.changedSelectedYear.emit(this.selectedYear);
+  }
 }

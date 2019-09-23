@@ -9,13 +9,9 @@
         <img height="35px" width="35px" [src]="PANELICON" alt="" />
         <p>Panel Board</p>
       </li>
-      <li class="sidebar__admin" routerLink="/profesorPanel/pregledStudenata">
+      <li class="sidebar__admin" [routerLink]="[baseUrl + '/profesorPanel']">
         <img height="35px" width="auto" [src]="PREGLEDSTUDENATA" alt="" />
         <p style="font-size:11px">Pregled Studenata</p>
-      </li>
-      <li class="sidebar__calendar">
-        <img height="35px" width="35px" [src]="KALENDAR" alt="" />
-        <p>Kalendar</p>
       </li>
       <li class="sidebar__inbox">
         <img height="35px" width="35px" [src]="PORUKA" alt="" />

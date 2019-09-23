@@ -1,28 +1,37 @@
+<select [(ngModel)]="selectedYear" (change)="onChange($event.target.value)" class="form-control w-auto ml-3">
+  <option *ngFor="let yos of years; let i = index" [ngValue]="yos">{{ i + 1 }}. godina</option>
+</select>
+<br>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-
-        <li class="nav-item nav-item--success">
-            <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-                <button class="btn btn-outline-success color-white" ngbDropdownToggle>Kreiraj</button>
-                <div class="dropdown-menu" ngbDropdownMenu>
-                  <button routerLink="/profesorPanel/kreirajIshodSilabusa" routerLinkActive="is-active" ngbDropdownItem> <span>Ishod Silabusa</span></button>
-                  <button routerLink="/profesorPanel/kreirajObavestenje" routerLinkActive="is-active" ngbDropdownItem> <span>Obavestenje</span></button>
-                  <!-- <button routerLink="/profesorPanel/kreirajStudenta" routerLinkActive="is-active" ngbDropdownItem> <span>Studenta</span></button> -->
-                </div>
-              </div>
-        </li>
-        <li class="nav-item nav-item--primary">
-            <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-                <button class="btn btn-outline-primary color-white" id="dropdownConfig" ngbDropdownToggle>Upravljaj</button>
-                <div ngbDropdownMenu aria-labelledby="dropdownConfig">
-                    <button routerLink="/profesorPanel/upravljanjeSilabusa" routerLinkActive="is-active" ngbDropdownItem><span>Silabusom</span></button>
-                  <button routerLink="/profesorPanel/upravljanjeObavestenjima" routerLinkActive="is-active" ngbDropdownItem><span>Obavestenjima</span></button>
-                </div>
-              </div>
-        </li>
-        <!-- <li class="nav-item nav-item--destroy">
+      <li class="nav-item nav-item--success">
+        <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown
+          role="group" aria-label="Button group with nested dropdown">
+          <button class="btn btn-outline-success color-white" ngbDropdownToggle>Kreiraj</button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <button routerLink="/profesorPanel/kreirajIshodSilabusa" routerLinkActive="is-active" ngbDropdownItem>
+              <span>Ishod Silabusa</span></button>
+            <button routerLink="/profesorPanel/kreirajObavestenje" routerLinkActive="is-active" ngbDropdownItem>
+              <span>Obavestenje</span></button>
+            <!-- <button routerLink="/profesorPanel/kreirajStudenta" routerLinkActive="is-active" ngbDropdownItem> <span>Studenta</span></button> -->
+          </div>
+        </div>
+      </li>
+      <li class="nav-item nav-item--primary">
+        <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown
+          role="group" aria-label="Button group with nested dropdown">
+          <button class="btn btn-outline-primary color-white" id="dropdownConfig" ngbDropdownToggle>Upravljaj</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownConfig">
+            <button routerLink="/profesorPanel/upravljanjeSilabusa" routerLinkActive="is-active"
+              ngbDropdownItem><span>Silabusom</span></button>
+            <button routerLink="/profesorPanel/upravljanjeObavestenjima" routerLinkActive="is-active"
+              ngbDropdownItem><span>Obavestenjima</span></button>
+          </div>
+        </div>
+      </li>
+      <!-- <li class="nav-item nav-item--destroy">
             <div routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
                 <button class="btn btn-outline-danger color-white" ngbDropdownToggle>Obriši</button>
                 <div class="dropdown-menu" profesorPanel/obrisiProfesora" routerLinkActive="is-active" ngbDropdownItem><span>Profesora</span></button>
@@ -30,27 +39,16 @@
                 </div>
               </div>
         </li> -->
-        <li class="nav-item" ngbDropdown>
-            <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown1" role="button">
-              Pregled
-            </a>
-            <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
-              <a routerLink="/profesorPanel/pregledStudenata" class="dropdown-item" href="#" (click)="$event.preventDefault()">Studenata</a>
-            </div>
-          </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Pretraga Studenata" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pretraži</button>
-
-      </form>
-      <div ngbDropdown placement="bottom-right" display="dynamic"  autoClose=outside class="d-inline-block">
-          <img style="margin-left:5px; cursor:pointer;" height="33px;" width="auto" [src]="FILTER" alt=""
-        matTooltip="Napredna Pretraga"
-        matTooltipPosition="below"  id="dropdownForm1" ngbDropdownToggle>
-          <div ngbDropdownMenu aria-labelledby="dropdownForm1" style="margin-top:20px;">
-            <app-napredna-pretraga></app-napredna-pretraga>
-          </div>
+      <li class="nav-item" ngbDropdown>
+        <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown1" role="button">
+          Pregled
+        </a>
+        <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+          <a [routerLink]="[baseUrl]" class="dropdown-item" href="#" (click)="$event.preventDefault()">Predmeta</a>
+          <a [routerLink]="[baseUrl + '/' + subjectId + '/students']" class="dropdown-item" href="#"
+            (click)="$event.preventDefault()">Studenata</a>
         </div>
-    </div>
-  </nav>
+      </li>
+    </ul>
+  </div>
+</nav>
